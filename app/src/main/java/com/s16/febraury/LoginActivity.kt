@@ -63,34 +63,7 @@ fun LoginActivity(navController: NavHostController) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            OutlinedTextField(
-                value = phone,
-                onValueChange = {phone =it
-                                isButtonEnabled = phone.isNotEmpty()},
-                label = { Text(text = "Phone")},
-                singleLine = true,
-                leadingIcon = {Icon(
-                    Icons.Rounded.Phone,
-                    contentDescription = stringResource(id = R.string.desc)
-                )},
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 16.dp),
-                keyboardOptions = KeyboardOptions(
-                    keyboardType = KeyboardType.Email,
-                    imeAction = ImeAction.Next
-                ),)
-
-            // Login Button
-            Button(
-                onClick = {
-                    // Handle login logic here
-                          navController.navigate("B")
-                },
-                enabled = isButtonEnabled
-            ) {
-                Text("Login")
-            }
+            
         }
     }
 }
