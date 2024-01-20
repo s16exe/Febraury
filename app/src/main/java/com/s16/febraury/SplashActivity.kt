@@ -43,6 +43,7 @@ class SplashActivity :ComponentActivity() {
             alpha.animateTo(1f, animationSpec = tween(1200))
             delay(1500)
             startActivity(Intent(this@SplashActivity,MainActivity::class.java))
+            finish()
         }
         Box(modifier = Modifier
             .fillMaxSize()

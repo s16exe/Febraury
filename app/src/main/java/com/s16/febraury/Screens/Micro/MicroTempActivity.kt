@@ -1,7 +1,4 @@
-package com.s16.febraury
-
-import androidx.compose.ui.unit.sp
-
+package com.s16.febraury.Screens.Micro
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -14,12 +11,11 @@ import androidx.navigation.NavHostController
 
 
 @Composable
-fun PollutantsActivity1(navController: NavHostController) {
+fun MicroTempActivity(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "GLOBAL" , fontSize = 50.sp)
-        Text(text = "POLLUTANTS" , fontSize = 50.sp)
+        Text(text = "MicroTempActivity ")
     }
 }

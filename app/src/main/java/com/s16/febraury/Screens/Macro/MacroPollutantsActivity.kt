@@ -1,4 +1,7 @@
-package com.s16.febraury
+package com.s16.febraury.Screens.Macro
+
+import androidx.compose.ui.unit.sp
+
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,11 +14,12 @@ import androidx.navigation.NavHostController
 
 
 @Composable
-fun PollutantsActivity(navController: NavHostController) {
+fun MacroPollutantsActivity(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "POLLUTANTS")
+        Text(text = "GLOBAL" , fontSize = 50.sp)
+        Text(text = "POLLUTANTS" , fontSize = 50.sp)
     }
 }
