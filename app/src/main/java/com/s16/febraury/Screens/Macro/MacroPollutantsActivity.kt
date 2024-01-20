@@ -19,7 +19,6 @@ fun MacroPollutantsActivity(navController: NavHostController) {
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "GLOBAL" , fontSize = 50.sp)
-        Text(text = "POLLUTANTS" , fontSize = 50.sp)
+        Text(text = "MacroPollutantsActivity")
     }
 }
