@@ -1,4 +1,4 @@
-package com.s16.febraury
+package com.s16.febraury.Screens
 
 
 import androidx.compose.foundation.Image
@@ -31,7 +31,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
-
+import com.s16.febraury.R
 
 
 @Composable
@@ -85,7 +85,7 @@ fun LoginActivity(navController: NavHostController) {
             Button(
                 onClick = {
                     // Handle login logic here
-                          navController.navigate("B")
+                          navController.navigate("MicroMacro")
                 },
                 enabled = isButtonEnabled
             ) {
