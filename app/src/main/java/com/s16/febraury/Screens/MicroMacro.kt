@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -19,6 +20,11 @@ import com.s16.febraury.R
 
 @Composable
 fun MicroMacro(navController: NavHostController) {
+    Column {
+        Image(painter = painterResource(id = R.drawable.all_pic), contentDescription =null ,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop)
+    }
 
     Row(
         modifier = Modifier
@@ -33,21 +39,22 @@ fun MicroMacro(navController: NavHostController) {
 
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
 
 
     ) {
         Spacer(modifier = Modifier.height(180.dp))
-        Box(modifier = Modifier.fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(8.dp))){
+        Box(modifier = Modifier
+            .fillMaxWidth(0.95f)
+            .clip(RoundedCornerShape(16.dp))){
             Button(
                 onClick = { navController.navigate("MicroNavActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0xFF2a9d8f))
+                    .height(100.dp)
+                    .background(Color(0x906d597a))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -63,13 +70,15 @@ fun MicroMacro(navController: NavHostController) {
         }
 
         Spacer(modifier = Modifier.height(40.dp))
-        Box(modifier = Modifier.fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(8.dp))){
+        Box(modifier = Modifier
+            .fillMaxWidth(0.95f)
+            .clip(RoundedCornerShape(16.dp))){
             Button(
                 onClick = { navController.navigate("MacroNavActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0xFF2a9d8f))
+                    .height(100.dp)
+                    .background(Color(0x90355070))
                     ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -95,7 +104,7 @@ fun MicroMacro(navController: NavHostController) {
                 modifier = Modifier
                     .width(250.dp)
                     .height(50.dp)
-                    .background(Color(0xFF2a9d8f))
+//                    .background()
                     .clip(RoundedCornerShape(50.dp)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
