@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
@@ -19,7 +18,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -33,17 +31,20 @@ import com.s16.febraury.R
 
 @Composable
 fun MicroPollutantsActivity(navController: NavHostController) {
-    Box(modifier = Modifier.background(Color(0x33FAF5F2)).fillMaxSize(4f)) {
-        Box (modifier = Modifier.fillMaxSize()){
-            Image(painter = painterResource(id = R.drawable.polllbg), contentDescription =  null,
-                contentScale = ContentScale.FillBounds,
-                modifier = Modifier
-                    .matchParentSize()
-                    .blur(40.dp))
-            Box(modifier = Modifier.background(Color(0x33FAF5F2))) {
+
+    Column {
+        Image(painter = painterResource(id = R.drawable.polllbg), contentDescription =  null,
+            contentScale = ContentScale.FillBounds,
+            modifier = Modifier.fillMaxSize()
+        )
+    }
+    Column(modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally) {
+
                 Column(
                     horizontalAlignment = AbsoluteAlignment.Left,
-                    modifier = Modifier.padding(20.dp)
+
                 ) {
                     Text(
                         text = "AIR ",
@@ -120,7 +121,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             style = TextStyle(fontSize = 20.sp),
                             modifier = Modifier.offset(-28.dp, 200.dp)
                         )
-                        Icon(
+                        Image(
                             painter = painterResource(id = R.drawable.maskman),
                             contentDescription = null,
                             modifier = Modifier
@@ -146,5 +147,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
             }
         }
 
-    }
-}
+
+
+
+
