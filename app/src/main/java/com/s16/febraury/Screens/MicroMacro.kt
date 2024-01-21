@@ -26,6 +26,7 @@ fun MicroMacro(navController: NavHostController) {
             contentScale = ContentScale.Crop)
     }
 
+
     Row(
         modifier = Modifier
             .fillMaxSize(),
