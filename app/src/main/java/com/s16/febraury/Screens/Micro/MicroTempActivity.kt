@@ -36,9 +36,10 @@ import java.nio.file.WatchEvent
 
 
 @Composable
-fun MicroTempActivity(navController: NavHostController){
+fun MicroTempActivity(navController: NavHostController) {
     Column(
         modifier = Modifier
+            .background(color = Color.Black)
             .fillMaxSize(),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
@@ -47,7 +48,6 @@ fun MicroTempActivity(navController: NavHostController){
             modifier = Modifier
                 .fillMaxWidth()
                 .height(450.dp)
-
                 .background(MaterialTheme.colorScheme.surface)
 
         ) {
@@ -81,21 +81,25 @@ fun MicroTempActivity(navController: NavHostController){
                     .background(Color.Gray),
                 contentAlignment = Alignment.Center
             ) {
-                Row (verticalAlignment = Alignment.CenterVertically,
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceAround,
-                    modifier = Modifier.fillMaxSize())
+                    modifier = Modifier.fillMaxSize()
+                )
                 {
                     Text(
                         text = "Wind",
                         color = Color.White,
                         fontSize = 20.sp,
                     )
-                    Image(painter = painterResource(id = R.drawable.wind), contentDescription =null,
-                        modifier=Modifier.size(30.dp),
+                    Image(
+                        painter = painterResource(id = R.drawable.wind), contentDescription = null,
+                        modifier = Modifier.size(30.dp),
                         contentScale = ContentScale.Crop
                     )
-                    Text(text = "13km/h",
-                        color= Color.White,
+                    Text(
+                        text = "13km/h",
+                        color = Color.White,
                         fontSize = 20.sp
                     )
 
@@ -112,15 +116,19 @@ fun MicroTempActivity(navController: NavHostController){
                     .background(Color.Gray),
                 contentAlignment = Alignment.Center
             ) {
-                Row(verticalAlignment =Alignment.CenterVertically,
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceAround,
-                    modifier = Modifier.fillMaxSize()) {Text(
-                    text = "Humidity",
-                    color = Color.White,
-                    fontSize = 20.sp,
-                )
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Text(
+                        text = "Humidity",
+                        color = Color.White,
+                        fontSize = 20.sp,
+                    )
                     Image(
-                        painter = painterResource(id = R.drawable.humidity), contentDescription = null,
+                        painter = painterResource(id = R.drawable.humidity),
+                        contentDescription = null,
                         modifier = Modifier.size(30.dp),
                         contentScale = ContentScale.Crop
                     )
@@ -148,7 +156,7 @@ fun MicroTempActivity(navController: NavHostController){
                     Text(
                         text = "Pressure",
                         fontSize = 20.sp,
-                        color= Color.White
+                        color = Color.White
                     )
                     Image(
                         painter = painterResource(id = R.drawable.pressure),
@@ -159,16 +167,19 @@ fun MicroTempActivity(navController: NavHostController){
                     Text(
                         text = "15psi",
                         fontSize = 20.sp,
-                        color= Color.White
+                        color = Color.White
                     )
                 }
             }
         }
     }
-    @Composable
-    fun LinerGradient()
-    
 }
+    @Composable
+    fun LinerGradient(){
+
+    }
+
+
 
 
 
