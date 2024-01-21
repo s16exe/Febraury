@@ -49,7 +49,7 @@ fun MacroNavActivity(navController: NavHostController) {
                 onClick = { navController.navigate("MacroTempActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0x90c0b7b1))
+                    .height(100.dp).background(Color(0x70a54c14))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
