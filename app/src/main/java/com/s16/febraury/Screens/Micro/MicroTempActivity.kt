@@ -15,6 +15,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialogDefaults.shape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -26,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.s16.febraury.R
 
@@ -65,6 +68,7 @@ fun MicroTempActivity(navController: NavHostController) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(6.dp, 6.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Card(
                 modifier = Modifier
@@ -80,9 +84,10 @@ fun MicroTempActivity(navController: NavHostController) {
                         .background(color = Color.Blue)
                         .clip(shape = RoundedCornerShape(2.dp, 2.dp, 2.dp, 2.dp)),
                 ) {
-                    Text(text = "Wind",
-                        color=Color.White,
-                        fontSize = 20.dp,
+                    Text(
+                        text = "Wind",
+                        color = Color.White,
+                        fontSize = 20.sp,
                     )
 
                 }
@@ -106,25 +111,34 @@ fun MicroTempActivity(navController: NavHostController) {
                 }
             }
 
-            Card(
+            Box(
                 modifier = Modifier
-                    .padding(0.dp, 6.dp)
                     .height(100.dp)
-                    .fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.surface)
-
+                    .fillMaxWidth(0.95f)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.Blue),
+                contentAlignment = Alignment.Center
             ) {
-                Box(
-                    modifier = Modifier
-                        .height(100.dp)
-                        .fillMaxWidth()
-                        .background(color = Color.Blue)
-                        .clip(shape = RoundedCornerShape(2.dp, 2.dp, 2.dp, 2.dp)),
-                ) {
+                Row(verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxSize()) {
+
+                    Text(text ="Pressure",
+                        fontSize = 20.sp,
+                    )
+                    Text(text ="Pressure",
+                        fontSize = 20.sp,
+                    )
                 }
+
+
+
             }
         }
-
     }
 }
+
+
+
+
 
