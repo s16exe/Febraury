@@ -60,7 +60,7 @@ fun MicroNavActivity(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "Temperature",
+                    text = "Weather",
                     fontSize = 30.sp
                 )
             }
