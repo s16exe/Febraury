@@ -32,6 +32,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import com.s16.febraury.R
+import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 
 
 @Composable
@@ -49,7 +52,7 @@ fun LoginActivity(navController: NavHostController) {
         Alignment.Center){
 
 
-        Image(painter = painterResource(id = R.drawable.login_background), contentDescription =null ,
+        Image(painter = painterResource(id = R.drawable.login_back), contentDescription =null ,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop)
 
@@ -65,14 +68,19 @@ fun LoginActivity(navController: NavHostController) {
 
             OutlinedTextField(
                 value = phone,
-                onValueChange = {phone =it
-                                isButtonEnabled = phone.isNotEmpty()},
-                label = { Text(text = "Phone")},
+                onValueChange = {
+                    phone = it
+                    isButtonEnabled = phone.isNotEmpty()
+                },
+                label = { Text(text = "Phone",
+                    color = Color.White)},
                 singleLine = true,
-                leadingIcon = {Icon(
-                    Icons.Rounded.Phone,
-                    contentDescription = stringResource(id = R.string.desc)
-                )},
+                leadingIcon = {
+                    Icon(
+                        Icons.Rounded.Phone,
+                        contentDescription = stringResource(id = R.string.desc)
+                    )
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(bottom = 16.dp),

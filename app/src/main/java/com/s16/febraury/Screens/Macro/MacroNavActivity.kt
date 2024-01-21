@@ -10,7 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -19,6 +21,11 @@ import com.s16.febraury.R
 
 @Composable
 fun MacroNavActivity(navController: NavHostController) {
+    Column {
+        Image(painter = painterResource(id = R.drawable.mountain), contentDescription =null ,
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop)
+    }
 
     Column(
         modifier = Modifier
@@ -27,12 +34,14 @@ fun MacroNavActivity(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
 
-
         ) {
         Spacer(modifier = Modifier.height(140.dp))
-        Text(text = "Global Conditions", fontSize = 30.sp )
+        Text(text = "Global Conditions",
+            fontWeight = FontWeight.Bold,
+            fontSize = 35.sp,
+            color = Color(android.graphics.Color.parseColor("#ffe66d"))
+        )
         Spacer(modifier = Modifier.height(40.dp))
-
 
         Box(modifier = Modifier.fillMaxWidth(0.95f)
             .clip(RoundedCornerShape(8.dp))){
@@ -40,7 +49,7 @@ fun MacroNavActivity(navController: NavHostController) {
                 onClick = { navController.navigate("MacroTempActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0xFF2a9d8f))
+                    .height(100.dp).background(Color(0x90c0b7b1))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -62,7 +71,7 @@ fun MacroNavActivity(navController: NavHostController) {
                 onClick = { navController.navigate("MacroPollutantsActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0xFF2a9d8f))
+                    .height(100.dp).background(Color(0x808e6e53))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -88,7 +97,7 @@ fun MacroNavActivity(navController: NavHostController) {
                 modifier = Modifier
                     .width(250.dp)
                     .height(50.dp)
-                    .background(Color(0xFF2a9d8f))
+//                    .background(Color(0xFF2a9d8f))
                     .clip(RoundedCornerShape(50.dp)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
