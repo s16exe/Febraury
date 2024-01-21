@@ -71,7 +71,7 @@ fun MacroNavActivity(navController: NavHostController) {
                 onClick = { navController.navigate("MacroPollutantsActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0x808e6e53))
+                    .height(100.dp).background(Color(0x669B48E4))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
