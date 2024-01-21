@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -34,18 +35,15 @@ fun MicroPollutantsActivity(navController: NavHostController) {
 
     Column {
         Image(painter = painterResource(id = R.drawable.polllbg), contentDescription =  null,
-            contentScale = ContentScale.FillBounds,
+            contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
     }
     Column(modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
+        verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally) {
 
-                Column(
-                    horizontalAlignment = AbsoluteAlignment.Left,
 
-                ) {
                     Text(
                         text = "AIR ",
                         color = Color.White,
@@ -56,22 +54,23 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                         color = Color.White,
                         style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold)
                     )
-                    Row {
+                    Row(horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()) {
                         Text(
                             text = "Carbon",
                             color = Color.White,
-                            style = TextStyle(fontSize = 20.sp), modifier = Modifier.offset(5.dp, 30.dp)
-                        )
+                            style = TextStyle(fontSize = 20.sp),                         )
                         Text(
                             text = "Monoxide",
                             color = Color.White,
                             style = TextStyle(fontSize = 20.sp),
-                            modifier = Modifier.offset(-45.dp, 60.dp)
+
                         )
                         Text(
                             text = "CO",
                             color = Color.White,
-                            style = TextStyle(fontSize = 40.sp), modifier = Modifier.offset(5.dp, 30.dp)
+                            style = TextStyle(fontSize = 40.sp)
                         )
                     }
                     Row {
@@ -145,7 +144,6 @@ fun MicroPollutantsActivity(navController: NavHostController) {
 
                 }
             }
-        }
 
 
 
