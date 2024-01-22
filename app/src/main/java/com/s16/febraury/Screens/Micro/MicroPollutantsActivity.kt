@@ -66,6 +66,30 @@ fun MicroPollutantsActivity(navController: NavHostController) {
         )
 
 
+<<<<<<< Updated upstream
+=======
+                    Text(
+                        text = "AIR ",
+                        color = Color.White,
+                        style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold)
+                    )
+                    Text(
+                        text = "TOXICITY ",
+                        color = Color.White,
+                        style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold)
+                    )
+                    Row(horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()) {
+                        Text(
+                            text = "Carbon",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp),                         )
+                        Text(
+                            text = "Monoxide",
+                            color = Color.White,
+                            style = TextStyle(fontSize = 20.sp),
+>>>>>>> Stashed changes
 
         Spacer(modifier = Modifier.height(50.dp))
         Box(modifier = Modifier
