@@ -63,12 +63,12 @@ fun MicroTempActivity(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxSize()
                         .clip(shape = RoundedCornerShape(0.dp, 0.dp, 20.dp, 20.dp)),
-                    painter = painterResource(id = R.drawable.heavyrain),
+                    painter = painterResource(id = R.drawable.sunnycity1),
                     contentDescription = "Weather Background",
                     contentScale = ContentScale.Crop
                 )
-                Box(
-                    modifier = Modifier
+
+                    Box(modifier = Modifier
                         .height(300.dp)
                         .width(200.dp)
                         .clip(shape = RoundedCornerShape(20.dp))
@@ -76,34 +76,30 @@ fun MicroTempActivity(navController: NavHostController) {
                         .padding(2.dp),
                     contentAlignment = Alignment.Center,
                 ){
-                    Column(
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement=Arrangement.Center
-                    )
-                    {
-                        Text(
-                        text = "25°C",
-                        color = Color.White,
-                        fontSize = 70.sp,
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .offset(y = 10.dp),
-                    )
-
-                        Text(
-                            text = "sunny",
+                        Column(verticalArrangement = Arrangement.SpaceAround) {
+                            Text(
+                            text = "25°C",
                             color = Color.White,
-                            fontSize = 30.sp,
-                            fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily.SansSerif,
+                            fontSize = 70.sp,
                             modifier = Modifier
                                 .padding(16.dp)
-                                .offset(x = -10.dp,)
-                                .shadow(10.dp, shape = RoundedCornerShape(4.dp))
+                                .offset(y = 70.dp),
                         )
-                    }
 
-                   }
+                            Text(
+                                text = "sunny",
+                                color = Color.White,
+                                fontSize = 30.sp,
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily.SansSerif,
+                                modifier = Modifier
+                                    .padding(50.dp)
+                                    .offset(x = -5.dp,)
+                                    .shadow(10.dp, shape = RoundedCornerShape(4.dp))
+                            )
+                        }
+
+                    }
 
 
             }
@@ -122,7 +118,6 @@ fun MicroTempActivity(navController: NavHostController) {
                     .clip(shape = RoundedCornerShape(20.dp))
                     .background(Color.DarkGray.copy(alpha = 0.4f))
                     .padding(2.dp),
-                contentAlignment = Alignment.Center
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
