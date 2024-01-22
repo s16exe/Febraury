@@ -39,7 +39,7 @@ fun MicroNavActivity(navController: NavHostController) {
     ) {
         Spacer(modifier = Modifier.height(140.dp))
         Text(text = "Current Conditions",
-            fontSize = 30.sp,
+            fontSize = 35.sp,
             fontWeight = FontWeight.Bold,
             color = Color(android.graphics.Color.parseColor("#ffea00")))
         Spacer(modifier = Modifier.height(40.dp))
@@ -73,7 +73,8 @@ fun MicroNavActivity(navController: NavHostController) {
                 onClick = { navController.navigate("MicroPollutantsActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0x50fed0bb))
+                    .height(100.dp)
+                    .background(Color(0x50fed0bb))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -88,7 +89,7 @@ fun MicroNavActivity(navController: NavHostController) {
             }
         }
 
-        Spacer(modifier = Modifier.height(200.dp))
+        Spacer(modifier = Modifier.height(70.dp))
 
         Box(modifier = Modifier
             .width(250.dp)

@@ -58,7 +58,6 @@ fun MacroNavActivity(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "Temperature",
                     text = "Weather",
                     fontSize = 30.sp
                 )
@@ -87,7 +86,7 @@ fun MacroNavActivity(navController: NavHostController) {
             }
         }
 
-        Spacer(modifier = Modifier.height(200.dp))
+        Spacer(modifier = Modifier.height(70.dp))
 
         Box(modifier = Modifier
             .width(250.dp)
