@@ -16,6 +16,6 @@ fun MicroTempActivity(navController: NavHostController) {
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "MicroTempActivity ")
+        Text(text = "MicroWeatherActivity ")
     }
 }

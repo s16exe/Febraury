@@ -59,6 +59,7 @@ fun MacroNavActivity(navController: NavHostController) {
             ) {
                 Text(
                     text = "Temperature",
+                    text = "Weather",
                     fontSize = 30.sp
                 )
             }
