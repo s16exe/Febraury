@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
@@ -51,16 +52,7 @@ fun MicroTempActivity(navController: NavHostController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = currentDate.format(dateFormat),
-            color = Color.White,
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            fontFamily = FontFamily.Serif,
-            modifier = Modifier
-                .padding(16.dp)
-                .align(Alignment.TopCenter)
-        )
+
 
             Box(
                 modifier = Modifier
@@ -71,33 +63,49 @@ fun MicroTempActivity(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxSize()
                         .clip(shape = RoundedCornerShape(0.dp, 0.dp, 20.dp, 20.dp)),
-                    painter = painterResource(id = R.drawable.sunnycity1),
+                    painter = painterResource(id = R.drawable.heavyrain),
                     contentDescription = "Weather Background",
                     contentScale = ContentScale.Crop
                 )
-
-                Text(
-                    text = "25°C",
-                    color = Color.White,
-                    fontSize = 70.sp,
+                Box(
                     modifier = Modifier
-                        .padding(16.dp)
-                        .align(Alignment.TopCenter)
-                        .offset(y=130.dp)
-                )
+                        .height(300.dp)
+                        .width(200.dp)
+                        .clip(shape = RoundedCornerShape(20.dp))
+                        .background(Color.DarkGray.copy(alpha = 0.4f))
+                        .padding(2.dp),
+                    contentAlignment = Alignment.Center,
+                ){
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement=Arrangement.Center
+                    )
+                    {
+                        Text(
+                        text = "25°C",
+                        color = Color.White,
+                        fontSize = 70.sp,
+                        modifier = Modifier
+                            .padding(16.dp)
+                            .offset(y = 10.dp),
+                    )
 
-                Text(
-                    text = "sunny",
-                    color = Color.White,
-                    fontSize = 30.sp,
-                    fontWeight = FontWeight.Bold,
-                    fontFamily = FontFamily.SansSerif,
-                    modifier = Modifier
-                        .padding(16.dp)
-                        .align(Alignment.TopCenter)
-                        .offset(x=-10.dp,y = 210.dp)
-                        .shadow(10.dp, shape = RoundedCornerShape(4.dp))
-                )
+                        Text(
+                            text = "sunny",
+                            color = Color.White,
+                            fontSize = 30.sp,
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = FontFamily.SansSerif,
+                            modifier = Modifier
+                                .padding(16.dp)
+                                .offset(x = -10.dp,)
+                                .shadow(10.dp, shape = RoundedCornerShape(4.dp))
+                        )
+                    }
+
+                   }
+
+
             }
         }
         Column(
@@ -130,7 +138,7 @@ fun MicroTempActivity(navController: NavHostController) {
                     Image(
                         painter = painterResource(id = R.drawable.wind), contentDescription = null,
                         modifier = Modifier.size(30.dp),
-                        contentScale = ContentScale.Crop
+                        contentScale = ContentScale.Crop,
                     )
                     Text(
                         text = "13km/h",
