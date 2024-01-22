@@ -9,16 +9,21 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.offset
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -34,116 +39,170 @@ import com.s16.febraury.R
 fun MicroPollutantsActivity(navController: NavHostController) {
 
     Column {
-        Image(painter = painterResource(id = R.drawable.polllbg), contentDescription =  null,
+        Image(
+            painter = painterResource(id = R.drawable.pollution), contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
     }
-    Column(modifier = Modifier.fillMaxSize(),
+
+    Column(
+        modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        horizontalAlignment = Alignment.Start
+    ) {
+
+        Text(
+            text = "AIR ",
+            color = Color.White,
+            style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold),
+            modifier = Modifier.padding(30.dp,0.dp)
+        )
+        Text(
+            text = "TOXICITY ",
+            color = Color.White,
+            style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold),
+            modifier = Modifier.padding(30.dp,0.dp)
+        )
 
 
-                    Text(
-                        text = "AIR ",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold)
-                    )
-                    Text(
-                        text = "TOXICITY ",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 45.sp, fontWeight = FontWeight.Bold)
-                    )
-                    Row(horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.fillMaxWidth()) {
-                        Text(
-                            text = "Carbon",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),                         )
-                        Text(
-                            text = "Monoxide",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),
 
-                        )
-                        Text(
-                            text = "CO",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 40.sp)
-                        )
-                    }
-                    Row {
-                        Text(
-                            text = "Carbon",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp), modifier = Modifier.offset(5.dp, 70.dp)
-                        )
-                        Text(
-                            text = "Dioxide",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),
-                            modifier = Modifier.offset(-45.dp, 103.dp)
-                        )
-                        Text(
-                            text = "CO₂",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 40.sp),
-                            modifier = Modifier.offset(24.dp, 70.dp)
-                        )
-                    }
-                    Row {
-                        Text(
-                            text = "Methane",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),
-                            modifier = Modifier.offset(5.dp, 130.dp)
-                        )
-                        Spacer(modifier = Modifier.width(73.dp))
-                        Text(
-                            text = "CH₄",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 40.sp),
-                            modifier = Modifier.offset(-9.dp, 120.dp)
-                        )
-                    }
-                    Row {
-                        Text(
-                            text = "Dust",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),
-                            modifier = Modifier.offset(5.dp, 170.dp)
-                        )
-                        Text(
-                            text = "Hazard",
-                            color = Color.White,
-                            style = TextStyle(fontSize = 20.sp),
-                            modifier = Modifier.offset(-28.dp, 200.dp)
-                        )
-                        Image(
-                            painter = painterResource(id = R.drawable.maskman),
-                            contentDescription = null,
-                            modifier = Modifier
-                                .offset(50.dp, 170.dp)
-                                .size(45.dp)
-                        )
-                    }
-                    Button(
-                        onClick = { navController.popBackStack() }, modifier = Modifier
-                            .size(80.dp)
-                            .offset(230.dp, 250.dp)
-                    )
-
-                    {
-                        Icon(
-                            painter = painterResource(id = R.drawable.baseline_arrow_back_24),
-                            contentDescription = null, modifier = Modifier.size(80.dp)
-                        )
-                    }
+        Spacer(modifier = Modifier.height(50.dp))
+        Box(modifier = Modifier
+            .fillMaxWidth(0.99f)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0x66525353))) {
 
 
-                }
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(50.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(70.dp)
+        ) {
+
+                Text(
+                    text = "Carbon Monoxide",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 20.sp)
+                )
+                Text(
+                    text = "CO",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 40.sp)
+                )
             }
+        }
+        Spacer(modifier = Modifier.height(50.dp))
+        Box(modifier = Modifier
+            .fillMaxWidth(0.99f)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0x66525353))) {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(63.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = "Carbon Dioxide",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 20.sp)
+                )
+                Text(
+                    text = "CO₂",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 40.sp)
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(50.dp))
+        Box(modifier = Modifier
+            .fillMaxWidth(0.99f)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0x66525353))) {
+
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(110.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = "Methane",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 20.sp)
+                )
+
+                Text(
+                    text = "CH₄",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 40.sp)
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(50.dp))
+        Box(modifier = Modifier
+            .fillMaxWidth(0.99f)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color(0x66525353))) {
+            Row(
+                horizontalArrangement = Arrangement.spacedBy(85.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(70.dp)
+            ) {
+                Text(
+                    text = "Dust Hazard",
+                    color = Color.White,
+                    style = TextStyle(fontSize = 20.sp)
+                )
+
+                Image(
+                    painter = painterResource(id = R.drawable.maskman),
+                    contentDescription = null,
+                    modifier = Modifier.size(45.dp)
+                )
+            }
+        }
+        Row (modifier = Modifier.padding(80.dp,0.dp)){
+            Box(
+                modifier = Modifier
+                    .width(250.dp)
+                    .padding(16.dp)
+                    .clip(RoundedCornerShape(50.dp))
+            ) {
+                Button(
+                    onClick = { navController.popBackStack() },
+                    modifier = Modifier
+                        .width(200.dp)
+                        .height(50.dp)
+//                    .background(Color(0xFF2a9d8f))
+                        .clip(RoundedCornerShape(50.dp)),
+                    colors = ButtonDefaults.buttonColors(
+                        Color.Transparent
+                    )
+                ) {
+                    Text(
+                        text = "Go Back",
+                        fontSize = 20.sp
+
+                    )
+                }
+
+
+            }
+        }
+
+    }
+}
+
+
+
 
 
 
