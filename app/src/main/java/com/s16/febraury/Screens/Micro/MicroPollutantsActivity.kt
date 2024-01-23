@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -75,24 +76,33 @@ fun MicroPollutantsActivity(navController: NavHostController) {
 
 
         Row(
-            horizontalArrangement = Arrangement.spacedBy(50.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(70.dp)
         ) {
+            Box (modifier = Modifier
+                .height(70.dp)
+                .width(140.dp)
+                .padding(0.dp, 18.dp)){
 
                 Text(
                     text = "Carbon Monoxide",
                     color = Color.White,
                     style = TextStyle(fontSize = 20.sp)
-                )
+                )}
+            Box (modifier = Modifier
+                .height(70.dp)
+                .width(80.dp)) {
                 Text(
                     text = "CO",
                     color = Color.White,
                     style = TextStyle(fontSize = 40.sp)
                 )
             }
+            Box(modifier = Modifier.height(70.dp).width(80.dp))
+            }
         }
         Spacer(modifier = Modifier.height(50.dp))
         Box(modifier = Modifier
@@ -100,22 +110,30 @@ fun MicroPollutantsActivity(navController: NavHostController) {
             .clip(RoundedCornerShape(8.dp))
             .background(Color(0x66525353))) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(63.dp),
+                horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(70.dp)
             ) {
+                Box (modifier = Modifier
+                    .height(70.dp)
+                    .width(140.dp)
+                    .padding(0.dp, 18.dp)){
                 Text(
                     text = "Carbon Dioxide",
                     color = Color.White,
                     style = TextStyle(fontSize = 20.sp)
-                )
-                Text(
+                )}
+                Box (modifier = Modifier
+                    .height(70.dp)
+                    .width(80.dp)){
+                    Text(
                     text = "CO₂",
                     color = Color.White,
                     style = TextStyle(fontSize = 40.sp)
-                )
+                )}
+                Box(modifier = Modifier.height(70.dp).width(80.dp))
             }
         }
         Spacer(modifier = Modifier.height(50.dp))
@@ -125,23 +143,31 @@ fun MicroPollutantsActivity(navController: NavHostController) {
             .background(Color(0x66525353))) {
 
             Row(
-                horizontalArrangement = Arrangement.spacedBy(110.dp),
+                horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(70.dp)
             ) {
+                Box (modifier = Modifier
+                    .height(70.dp)
+                    .width(140.dp)
+                    .padding(0.dp, 18.dp)){
                 Text(
                     text = "Methane",
                     color = Color.White,
                     style = TextStyle(fontSize = 20.sp)
-                )
+                )}
+                Box (modifier = Modifier
+                    .height(70.dp)
+                    .width(80.dp)){
 
                 Text(
                     text = "CH₄",
                     color = Color.White,
                     style = TextStyle(fontSize = 40.sp)
-                )
+                )}
+                Box(modifier = Modifier.height(70.dp).width(80.dp))
             }
         }
         Spacer(modifier = Modifier.height(50.dp))
@@ -150,23 +176,30 @@ fun MicroPollutantsActivity(navController: NavHostController) {
             .clip(RoundedCornerShape(8.dp))
             .background(Color(0x66525353))) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(85.dp),
+                horizontalArrangement = Arrangement.SpaceAround,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(70.dp)
-            ) {
+            ) {Box (modifier = Modifier
+                .height(70.dp)
+                .width(140.dp)
+                .padding(0.dp, 18.dp)){
                 Text(
                     text = "Dust Hazard",
                     color = Color.White,
                     style = TextStyle(fontSize = 20.sp)
-                )
+                )}
+                Box (modifier = Modifier
+                    .height(70.dp)
+                    .width(80.dp)){
 
                 Image(
                     painter = painterResource(id = R.drawable.maskman),
                     contentDescription = null,
-                    modifier = Modifier.size(45.dp)
-                )
+                    modifier = Modifier.size(40.dp)
+                )}
+                Box(modifier = Modifier.height(70.dp).width(80.dp))
             }
         }
         Row (modifier = Modifier.padding(80.dp,0.dp)){
