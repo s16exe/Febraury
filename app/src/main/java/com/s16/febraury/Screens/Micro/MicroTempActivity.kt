@@ -46,242 +46,254 @@ import java.nio.file.WatchEvent
 
 @Composable
 fun MicroTempActivity(navController: NavHostController) {
-    Column(
-        modifier = Modifier
-            .background(color = Color.Black)
-            .fillMaxSize(),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
 
 
-        Box(
-            modifier = Modifier
-                .clip(shape = RoundedCornerShape(0.dp, 0.dp, 12.dp, 12.dp)),
-        ) {
 
-            Image(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .clip(shape = RoundedCornerShape(0.dp, 0.dp, 20.dp, 20.dp)),
-                painter = painterResource(id = R.drawable.sunnycity1),
-                contentDescription = "Weather Background",
-                contentScale = ContentScale.Crop
-            )
-
-            Box(
-                modifier = Modifier
-                    .height(300.dp)
-                    .width(200.dp)
-                    .clip(shape = RoundedCornerShape(20.dp))
-                    .background(Color.DarkGray.copy(alpha = 0.4f))
-                    .padding(2.dp),
-                contentAlignment = Alignment.Center,
-            ) {
-                Column(verticalArrangement = Arrangement.SpaceAround) {
-                    Text(
-                        text = "25°C",
-                        color = Color.White,
-                        fontSize = 70.sp,
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .offset(y = 70.dp),
-                    )
-
-                    Text(
-                        text = "sunny",
-                        color = Color.White,
-                        fontSize = 30.sp,
-                        fontWeight = FontWeight.Bold,
-                        fontFamily = FontFamily.SansSerif,
-                        modifier = Modifier
-                            .padding(50.dp)
-                            .offset(x = -5.dp,)
-                            .shadow(10.dp, shape = RoundedCornerShape(4.dp))
-                    )
-                }
-
-            }
-
-
-        }
+    Column (modifier = Modifier
+        .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally){
+        Image(modifier = Modifier.fillMaxSize(),
+                        painter = painterResource(id = R.drawable.sunnycity1),
+            contentDescription = "Weather Background",
+            contentScale = ContentScale.Crop
+        )
     }
+
+
+
+
+
+
+
+
+
+
+
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(6.dp, 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom
+        verticalArrangement = Arrangement.SpaceAround
     ) {
-        Box(
-            modifier = Modifier
-                .height(100.dp)
-                .fillMaxWidth(0.95f)
-                .clip(shape = RoundedCornerShape(20.dp))
-                .background(Color.DarkGray.copy(alpha = 0.4f))
-                .padding(2.dp),
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxSize()
+
+        Box(modifier = Modifier.
+        fillMaxWidth(),
+            contentAlignment = Alignment.Center){
+            Column(verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier
+                    .height(200.dp)
+                    .width(200.dp)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.DarkGray.copy(alpha = 0.4f))
             )
             {
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.3f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                ){
-                    Text(
-                        text = "Wind",
-                        color = Color.White,
-                        fontSize = 20.sp,
-                    )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.25f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                ){
-                    Image(
-                        painter = painterResource(id = R.drawable.wind), contentDescription = null,
-                        modifier = Modifier.size(30.dp),
-                        contentScale = ContentScale.Crop,
-                    )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.40f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                ){
-                    Text(
-                        text = "13km/h",
-                        color = Color.White,
-                        fontSize = 20.sp
-                    )
-                }
+                Text(
+                    text = "25°C",
+                    color = Color.White,
+                    fontSize = 70.sp,
+                    modifier = Modifier
 
 
+                )
+
+                Text(
+                    text = "sunny",
+                    color = Color.White,
+                    fontSize = 30.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.SansSerif,
+                )
             }
-
         }
-        Spacer(modifier = Modifier.height(8.dp))
 
-        Box(
-            modifier = Modifier
-                .height(100.dp)
-                .fillMaxWidth(0.95f)
-                .clip(shape = RoundedCornerShape(20.dp))
-                .background(Color.DarkGray.copy(alpha = 0.4f))
-                .padding(2.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxSize()
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+
+        Column {
+            Box(
+                modifier = Modifier
+                    .height(100.dp)
+                    .fillMaxWidth(0.95f)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.DarkGray.copy(alpha = 0.4f))
+                    .padding(2.dp),
             ) {
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.3f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxSize()
                 )
                 {
-                    Text(
-                        text = "Humidity",
-                        color = Color.White,
-                        fontSize = 20.sp,
-                    )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.25f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                )
-                {
-                    Image(
-                        painter = painterResource(id = R.drawable.humidity),
-                        contentDescription = null,
-                        modifier = Modifier.size(30.dp),
-                        contentScale = ContentScale.Crop
-                    )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.30f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                )
-                {
-                    Text(
-                        text = "72%",
-                        fontSize = 20.sp,
-                        color = Color.White,
-                    )
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.3f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ){
+                        Text(
+                            text = "Wind",
+                            color = Color.White,
+                            fontSize = 20.sp,
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.25f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ){
+                        Image(
+                            painter = painterResource(id = R.drawable.wind), contentDescription = null,
+                            modifier = Modifier.size(30.dp),
+                            contentScale = ContentScale.Crop,
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.40f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ){
+                        Text(
+                            text = "13km/h",
+                            color = Color.White,
+                            fontSize = 20.sp
+                        )
+                    }
+
+
                 }
 
             }
 
-        }
-        Spacer(modifier = Modifier.height(8.dp))
-        Box(
-            modifier = Modifier
-                .height(100.dp)
-                .fillMaxWidth(0.95f)
-                .clip(shape = RoundedCornerShape(20.dp))
-                .background(Color.DarkGray.copy(alpha = 0.4f)),
-            contentAlignment = Alignment.Center
-        ) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceAround,
-                modifier = Modifier.fillMaxSize()
+            Spacer(modifier = Modifier.height(5.dp))
+
+            Box(
+                modifier = Modifier
+                    .height(100.dp)
+                    .fillMaxWidth(0.95f)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.DarkGray.copy(alpha = 0.4f))
+                    .padding(2.dp),
+                contentAlignment = Alignment.Center
             ) {
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.3f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                )
-                {
-                    Text(
-                        text = "Pressure",
-                        fontSize = 20.sp,
-                        color = Color.White
-                    )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.25f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxSize()
                 ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.pressure),
-                        contentDescription = null,
-                        modifier = Modifier.size(30.dp),
-                        contentScale = ContentScale.Crop
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.3f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
                     )
-                }
-                Box(
-                    modifier = Modifier.fillMaxWidth(0.30f)
-                        .fillMaxHeight(),
-                    contentAlignment = Alignment.Center
-                )
-                {
-                    Text(
-                        text = "15psi",
-                        fontSize = 20.sp,
-                        color = Color.White
+                    {
+                        Text(
+                            text = "Humidity",
+                            color = Color.White,
+                            fontSize = 20.sp,
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.25f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
                     )
-                }
+                    {
+                        Image(
+                            painter = painterResource(id = R.drawable.humidity),
+                            contentDescription = null,
+                            modifier = Modifier.size(30.dp),
+                            contentScale = ContentScale.Crop
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.30f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    )
+                    {
+                        Text(
+                            text = "72%",
+                            fontSize = 20.sp,
+                            color = Color.White,
+                        )
+                    }
 
+                }
 
             }
+            Spacer(modifier = Modifier.height(5.dp))
+
+            Box(
+                modifier = Modifier
+                    .height(100.dp)
+                    .fillMaxWidth(0.95f)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.DarkGray.copy(alpha = 0.4f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.3f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    )
+                    {
+                        Text(
+                            text = "Pressure",
+                            fontSize = 20.sp,
+                            color = Color.White
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.25f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.pressure),
+                            contentDescription = null,
+                            modifier = Modifier.size(30.dp),
+                            contentScale = ContentScale.Crop
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.30f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    )
+                    {
+                        Text(
+                            text = "15psi",
+                            fontSize = 20.sp,
+                            color = Color.White
+                        )
+                    }
+
+                }
+            }
         }
-        Spacer(modifier = Modifier.height(15.dp))
 
         Box(
             modifier = Modifier
                 .width(250.dp)
-                .padding(16.dp)
                 .clip(RoundedCornerShape(50.dp))
         ) {
             Button(
@@ -301,6 +313,7 @@ fun MicroTempActivity(navController: NavHostController) {
             }
         }
     }
+   
 }
 
 
