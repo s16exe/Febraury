@@ -88,7 +88,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             Text(
                                 text = "AIR TOXICITY",
                                 color = Color.White,
-                                style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                                style = TextStyle(fontSize = 18.sp, fontWeight = FontWeight.Bold)
                             )
                         }
                         Box(
@@ -120,7 +120,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             Text(
                                 text = "Carbon Monoxide",
                                 color = Color.White,
-                                style = TextStyle(fontSize = 20.sp)
+                                style = TextStyle(fontSize = 18.sp)
                             )
                         }
                         Box(
@@ -152,7 +152,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             Text(
                                 text = "Carbon Dioxide",
                                 color = Color.White,
-                                style = TextStyle(fontSize = 20.sp)
+                                style = TextStyle(fontSize = 18.sp)
                             )
                         }
                         Box(
@@ -184,7 +184,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             Text(
                                 text = "Methane",
                                 color = Color.White,
-                                style = TextStyle(fontSize = 20.sp)
+                                style = TextStyle(fontSize = 18.sp)
                             )
                         }
                         Box(
@@ -218,7 +218,7 @@ fun MicroPollutantsActivity(navController: NavHostController) {
                             Text(
                                 text = "Dust Hazard",
                                 color = Color.White,
-                                style = TextStyle(fontSize = 20.sp)
+                                style = TextStyle(fontSize = 18.sp)
                             )
                         }
                         Box(
