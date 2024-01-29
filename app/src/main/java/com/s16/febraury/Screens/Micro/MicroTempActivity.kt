@@ -150,9 +150,10 @@ fun MicroTempActivity(navController: NavHostController) {
                         contentAlignment = Alignment.Center
                     ){
                         Image(
-                            painter = painterResource(id = R.drawable.wind), contentDescription = null,
+                            painter = painterResource(id = R.drawable.wind),
+                            contentDescription = null,
                             modifier = Modifier.size(30.dp),
-                            contentScale = ContentScale.Crop,
+                            colorFilter = ColorFilter.tint(Color.White)
                         )
                     }
                     Box(
@@ -213,7 +214,7 @@ fun MicroTempActivity(navController: NavHostController) {
                             painter = painterResource(id = R.drawable.humidity),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
-                            contentScale = ContentScale.Crop
+                            colorFilter = ColorFilter.tint(Color.White)
                         )
                     }
                     Box(
@@ -271,7 +272,7 @@ fun MicroTempActivity(navController: NavHostController) {
                             painter = painterResource(id = R.drawable.pressure),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
-                            contentScale = ContentScale.Crop
+                            colorFilter = ColorFilter.tint(Color.White)
                         )
                     }
                     Box(
