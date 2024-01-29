@@ -58,6 +58,7 @@ fun MicroTempActivity(navController: NavHostController) {
             contentDescription = "Weather Background",
             contentScale = ContentScale.Crop
         )
+
     }
 
 

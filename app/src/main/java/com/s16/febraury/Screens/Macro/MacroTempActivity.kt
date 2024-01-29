@@ -19,6 +19,6 @@ fun MacroTempActivity(navController: NavHostController) {
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text(text = "MacroTempActivity")
+        Text(text = "MacroWeatherActivity")
     }
 }

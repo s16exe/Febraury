@@ -27,15 +27,6 @@ fun MicroMacro(navController: NavHostController) {
     }
 
 
-    Row(
-        modifier = Modifier
-            .fillMaxSize(),
-        verticalAlignment = Alignment.Top,
-        horizontalArrangement = Arrangement.Center
-    ) {
-
-    }
-
     Spacer(modifier = Modifier.height(16.dp))
 
     Column(
@@ -105,7 +96,6 @@ fun MicroMacro(navController: NavHostController) {
                 modifier = Modifier
                     .width(250.dp)
                     .height(50.dp)
-//                    .background()
                     .clip(RoundedCornerShape(50.dp)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
