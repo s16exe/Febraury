@@ -28,6 +28,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -47,233 +48,242 @@ fun MicroPollutantsActivity(navController: NavHostController) {
             modifier = Modifier.fillMaxSize()
         )
     }
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier
-            .fillMaxHeight(0.80f)
-            .fillMaxWidth(0.80f)
-            .background(Color(0x80FAF1F3))
-    )
-    {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceAround
+    ) {
+        Text(
+            text = "POLLUTANTS",
+            color = Color.DarkGray,
+            style = TextStyle(fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        )
         Column(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.Top,
+            modifier = Modifier.fillMaxWidth()
+                .fillMaxHeight(0.65f),
+            verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        )
 
-            Row(
-                horizontalArrangement = Arrangement.SpaceAround,
-                verticalAlignment = Alignment.CenterVertically,
+        {
+            Box(
+                contentAlignment = Alignment.Center,
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f)
+                    .fillMaxWidth(0.80f)
+                    .clip(RoundedCornerShape(30.dp))
+                    .background(Color(0x665F4638))
+            )
+            {
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    verticalArrangement = Arrangement.Top,
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
 
-                    Text(
-                        text = "AIR TOXICITY",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f),
 
-            }
+                            ) {
 
-            Spacer(modifier = Modifier.height(50.dp))
-            Row(
-                horizontalArrangement = Arrangement.SpaceAround,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f),
-                    contentAlignment = Alignment.Center
-                ) {
+                            Text(
+                                text = "AIR TOXICITY",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .height(70.dp)
+                                .width(80.dp)
+                        )
+                        Box(
+                            modifier = Modifier
+                                .height(70.dp)
+                                .width(80.dp)
+                        )
 
-                    Text(
-                        text = "Carbon Monoxide",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "CO",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 40.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
-            }
+                    }
 
-            Spacer(modifier = Modifier.height(50.dp))
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f),
+                            contentAlignment = Alignment.Center
+                        ) {
 
-            Row(
-                horizontalArrangement = Arrangement.SpaceAround,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "Carbon Dioxide",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "CO₂",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 40.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
-            }
+                            Text(
+                                text = "Carbon Monoxide",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 20.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "CO",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 40.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.40f)
+                        )
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Carbon Dioxide",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 20.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "CO₂",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 40.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.40f)
+                        )
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Methane",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 20.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.40f),
+                            contentAlignment = Alignment.Center
+                        ) {
 
-            Spacer(modifier = Modifier.height(50.dp))
-            Row(
-                horizontalArrangement = Arrangement.SpaceAround,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "Methane",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.40f),
-                    contentAlignment = Alignment.Center
-                ) {
+                            Text(
+                                text = "CH₄",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 40.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.40f)
+                        )
+                    }
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceAround,
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(70.dp)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = "Dust Hazard",
+                                color = Color.White,
+                                style = TextStyle(fontSize = 20.sp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.40f), contentAlignment = Alignment.Center
+                        ) {
 
-                    Text(
-                        text = "CH₄",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 40.sp)
-                    )
+                            Image(
+                                painter = painterResource(id = R.drawable.maskman),
+                                contentDescription = null,
+                                modifier = Modifier.size(40.dp)
+                            )
+                        }
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth(0.60f)
+                        )
+                    }
                 }
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
-            }
-
-            Spacer(modifier = Modifier.height(50.dp))
-            Row(
-                horizontalArrangement = Arrangement.SpaceAround,
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(70.dp)
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.25f), contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "Dust Hazard",
-                        color = Color.White,
-                        style = TextStyle(fontSize = 20.sp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth(0.40f), contentAlignment = Alignment.Center
-                ) {
-
-                    Image(
-                        painter = painterResource(id = R.drawable.maskman),
-                        contentDescription = null,
-                        modifier = Modifier.size(40.dp)
-                    )
-                }
-                Box(
-                    modifier = Modifier
-                        .height(70.dp)
-                        .width(80.dp)
-                )
             }
         }
     }
-
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Bottom,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-            Box(
+        Box(
+            modifier = Modifier
+                .width(250.dp)
+                .padding(16.dp)
+                .clip(RoundedCornerShape(50.dp))
+        ) {
+            Button(
+                onClick = { navController.popBackStack() },
                 modifier = Modifier
-                    .width(250.dp)
-                    .padding(16.dp)
-                    .clip(RoundedCornerShape(50.dp))
-            ) {
-                Button(
-                    onClick = { navController.popBackStack() },
-                    modifier = Modifier
-                        .width(200.dp)
-                        .height(50.dp)
+                    .width(200.dp)
+                    .height(50.dp)
 //                    .background(Color(0xFF2a9d8f))
-                        .clip(RoundedCornerShape(50.dp)),
-                    colors = ButtonDefaults.buttonColors(
-                        Color.Transparent
-                    )
-                ) {
-                    Text(
-                        text = "Go Back",
-                        fontSize = 20.sp
+                    .clip(RoundedCornerShape(50.dp)),
+                colors = ButtonDefaults.buttonColors(
+                    Color.Transparent
+                )
+            ) {
+                Text(
+                    text = "Go Back",
+                    fontSize = 20.sp
 
-                    )
-                }
-
+                )
             }
 
         }
+
     }
+}
+
+
 
 
 
