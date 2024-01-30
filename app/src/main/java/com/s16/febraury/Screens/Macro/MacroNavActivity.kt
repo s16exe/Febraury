@@ -54,8 +54,6 @@ fun MacroNavActivity(navController: NavHostController) {
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
                     text = "Weather",
@@ -76,11 +74,9 @@ fun MacroNavActivity(navController: NavHostController) {
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "Pollutants",
+                    text = "Pollution",
                     fontSize = 30.sp
                 )
             }

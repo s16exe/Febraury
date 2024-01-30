@@ -56,8 +56,6 @@ fun MicroNavActivity(navController: NavHostController) {
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
                     text = "Weather",
@@ -74,16 +72,13 @@ fun MicroNavActivity(navController: NavHostController) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(100.dp)
-                    .background(Color(0x50fed0bb))
-                ,
+                    .background(Color(0x50fed0bb)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "Pollutants",
+                    text = "Pollution",
                     fontSize = 30.sp
                 )
             }
@@ -100,7 +95,6 @@ fun MicroNavActivity(navController: NavHostController) {
                 modifier = Modifier
                     .width(250.dp)
                     .height(50.dp)
-//                    .background(Color(0xFF2a9d8f))
                     .clip(RoundedCornerShape(50.dp)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -117,9 +111,5 @@ fun MicroNavActivity(navController: NavHostController) {
         Spacer(modifier = Modifier.height(16.dp))
 
     }
-
-
-
-
 
     }

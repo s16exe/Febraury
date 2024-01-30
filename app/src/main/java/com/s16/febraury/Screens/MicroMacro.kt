@@ -63,7 +63,7 @@ fun MicroMacro(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "MICRO",
+                    text = "LOCAL",
                     fontSize = 30.sp
                 )
             }
@@ -87,7 +87,7 @@ fun MicroMacro(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "MACRO",
+                    text = "NETWORK",
                     fontSize = 30.sp
                 )
             }
