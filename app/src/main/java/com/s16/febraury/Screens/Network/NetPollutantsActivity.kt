@@ -1,6 +1,4 @@
-package com.s16.febraury.Screens.Macro
-
-import androidx.compose.ui.unit.sp
+package com.s16.febraury.Screens.Network
 
 
 import androidx.compose.foundation.layout.Arrangement
@@ -14,7 +12,7 @@ import androidx.navigation.NavHostController
 
 
 @Composable
-fun MacroPollutantsActivity(navController: NavHostController) {
+fun NetPollutantsActivity(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,

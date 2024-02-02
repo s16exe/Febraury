@@ -1,4 +1,4 @@
-package com.s16.febraury.Screens
+package com.s16.febraury.Screens.Local
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,11 +7,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -19,34 +20,38 @@ import com.s16.febraury.R
 
 
 @Composable
-fun MicroMacro(navController: NavHostController) {
+fun LocalNavActivity(navController: NavHostController) {
     Column {
-        Image(painter = painterResource(id = R.drawable.all_pic), contentDescription =null ,
+        Image(painter = painterResource(id = R.drawable.city_mountain), contentDescription =null ,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop)
     }
 
 
-    Spacer(modifier = Modifier.height(16.dp))
-
     Column(
         modifier = Modifier
-            .fillMaxSize(),
+            .fillMaxSize()
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
 
 
     ) {
-        Spacer(modifier = Modifier.height(180.dp))
-        Box(modifier = Modifier
-            .fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(16.dp))){
+        Spacer(modifier = Modifier.height(140.dp))
+        Text(text = "Local Conditions",
+            fontSize = 30.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(android.graphics.Color.parseColor("#ffea00")))
+        Spacer(modifier = Modifier.height(40.dp))
+
+
+        Box(modifier = Modifier.fillMaxWidth(0.95f)
+            .clip(RoundedCornerShape(8.dp))){
             Button(
-                onClick = { navController.navigate("MicroNavActivity") },
+                onClick = { navController.navigate("LocalTempActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp)
-                    .background(Color(0x906d597a))
+                    .height(100.dp).background(Color(0x9077a6b6))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -55,23 +60,21 @@ fun MicroMacro(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "MICRO",
+                    text = "Weather",
                     fontSize = 30.sp
                 )
             }
         }
 
-        Spacer(modifier = Modifier.height(40.dp))
-        Box(modifier = Modifier
-            .fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(16.dp))){
+        Spacer(modifier = Modifier.height(50.dp))
+        Box(modifier = Modifier.fillMaxWidth(0.95f)
+            .clip(RoundedCornerShape(8.dp))){
             Button(
-                onClick = { navController.navigate("MacroNavActivity") },
+                onClick = { navController.navigate("LocalPollutantsActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp)
-                    .background(Color(0x90355070))
-                    ,
+                    .height(100.dp).background(Color(0x50fed0bb))
+                ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
@@ -79,7 +82,7 @@ fun MicroMacro(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "MACRO",
+                    text = "Pollutants",
                     fontSize = 30.sp
                 )
             }
@@ -96,6 +99,7 @@ fun MicroMacro(navController: NavHostController) {
                 modifier = Modifier
                     .width(250.dp)
                     .height(50.dp)
+//                    .background(Color(0xFF2a9d8f))
                     .clip(RoundedCornerShape(50.dp)),
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -109,9 +113,12 @@ fun MicroMacro(navController: NavHostController) {
             }
         }
 
+        Spacer(modifier = Modifier.height(16.dp))
 
     }
 
 
 
-}
+
+
+    }

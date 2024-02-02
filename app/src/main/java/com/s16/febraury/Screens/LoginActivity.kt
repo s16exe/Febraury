@@ -93,7 +93,7 @@ fun LoginActivity(navController: NavHostController) {
             Button(
                 onClick = {
                     // Handle login logic here
-                          navController.navigate("MicroMacro")
+                          navController.navigate("LocalNetwork")
                 },
                 enabled = isButtonEnabled
             ) {

@@ -1,4 +1,4 @@
-package com.s16.febraury.Screens.Macro
+package com.s16.febraury.Screens.Network
 
 
 
@@ -9,12 +9,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 
 @Composable
-fun MacroTempActivity(navController: NavHostController) {
+fun StationTempActivity(navController: NavHostController) {
     Column(modifier = Modifier
         .fillMaxSize(),
         verticalArrangement = Arrangement.Center,

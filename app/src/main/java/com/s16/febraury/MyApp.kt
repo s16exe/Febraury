@@ -5,8 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.s16.febraury.Screens.*
-import com.s16.febraury.Screens.Micro.*
-import com.s16.febraury.Screens.Macro.*
+import com.s16.febraury.Screens.Local.*
+import com.s16.febraury.Screens.Network.*
 
 @Composable
 fun MyApp() {
@@ -16,27 +16,33 @@ fun MyApp() {
         composable("Login") {
             LoginActivity(navController)
         }
-        composable("MicroMacro") {
-            MicroMacro(navController)
+        composable("LocalNetwork") {
+            LocalNetwork(navController)
         }
-        composable("MicroNavActivity") {
-            MicroNavActivity(navController)
+        composable("LocalNavActivity") {
+            LocalNavActivity(navController)
         }
 
-        composable("MicroTempActivity") {
-            MicroTempActivity(navController)
+        composable("LocalTempActivity") {
+            LocalTempActivity(navController)
         }
-        composable("MicroPollutantsActivity") {
-            MicroPollutantsActivity(navController)
+        composable("LocalPollutantsActivity") {
+            LocalPollutantsActivity(navController)
         }
-        composable("MacroNavActivity") {
-            MacroNavActivity(navController)
+        composable("NetCityActivity") {
+            NetCityActivity(navController)
         }
-        composable("MacroTempActivity") {
-            MacroTempActivity(navController)
+        composable("NetListActivity") {
+            NetListActivity(navController)
         }
-        composable("MacroPollutantsActivity") {
-            MacroPollutantsActivity(navController)
+        composable("NetNavActivity") {
+            NetNavActivity(navController)
+        }
+        composable("StationTempActivity") {
+            StationTempActivity(navController)
+        }
+        composable("NetPollutantsActivity") {
+            NetPollutantsActivity(navController)
         }
 
     }

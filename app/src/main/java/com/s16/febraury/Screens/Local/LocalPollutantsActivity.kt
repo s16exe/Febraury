@@ -1,4 +1,4 @@
-package com.s16.febraury.Screens.Micro
+package com.s16.febraury.Screens.Local
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -33,7 +33,7 @@ import com.s16.febraury.R
 
 
 @Composable
-fun MicroPollutantsActivity(navController: NavHostController) {
+fun LocalPollutantsActivity(navController: NavHostController) {
 
     Column {
         Image(

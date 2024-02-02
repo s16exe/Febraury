@@ -1,4 +1,4 @@
-package com.s16.febraury.Screens.Micro
+package com.s16.febraury.Screens.Network
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -7,9 +7,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -20,13 +20,12 @@ import com.s16.febraury.R
 
 
 @Composable
-fun MicroNavActivity(navController: NavHostController) {
+fun NetNavActivity(navController: NavHostController) {
     Column {
-        Image(painter = painterResource(id = R.drawable.city_mountain), contentDescription =null ,
+        Image(painter = painterResource(id = R.drawable.mountain), contentDescription =null ,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop)
     }
-
 
     Column(
         modifier = Modifier
@@ -35,23 +34,22 @@ fun MicroNavActivity(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
 
-
-    ) {
+        ) {
         Spacer(modifier = Modifier.height(140.dp))
-        Text(text = "Current Conditions",
-            fontSize = 30.sp,
+        Text(text = "Station Conditions",
             fontWeight = FontWeight.Bold,
-            color = Color(android.graphics.Color.parseColor("#ffea00")))
+            fontSize = 35.sp,
+            color = Color(android.graphics.Color.parseColor("#ffe66d"))
+        )
         Spacer(modifier = Modifier.height(40.dp))
-
 
         Box(modifier = Modifier.fillMaxWidth(0.95f)
             .clip(RoundedCornerShape(8.dp))){
             Button(
-                onClick = { navController.navigate("MicroTempActivity") },
+                onClick = { navController.navigate("StationTempActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0x9077a6b6))
+                    .height(100.dp).background(Color(0x70a54c14))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -60,7 +58,7 @@ fun MicroNavActivity(navController: NavHostController) {
                 //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
-                    text = "Weather",
+                    text = "Temperature",
                     fontSize = 30.sp
                 )
             }
@@ -70,10 +68,10 @@ fun MicroNavActivity(navController: NavHostController) {
         Box(modifier = Modifier.fillMaxWidth(0.95f)
             .clip(RoundedCornerShape(8.dp))){
             Button(
-                onClick = { navController.navigate("MicroPollutantsActivity") },
+                onClick = { navController.navigate("NetPollutantsActivity") },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(100.dp).background(Color(0x50fed0bb))
+                    .height(100.dp).background(Color(0x669B48E4))
                 ,
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
@@ -121,4 +119,4 @@ fun MicroNavActivity(navController: NavHostController) {
 
 
 
-    }
+}
