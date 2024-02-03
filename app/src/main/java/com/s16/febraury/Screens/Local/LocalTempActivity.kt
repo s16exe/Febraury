@@ -52,17 +52,6 @@ fun LocalTempActivity(navController: NavHostController) {
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
     Column(
         modifier = Modifier
             .fillMaxSize()

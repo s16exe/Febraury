@@ -1,112 +1,120 @@
 package com.s16.febraury.Screens.Network
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.s16.febraury.R
 
+data class School(val name: String, val destination: String)
 
 @Composable
 fun NetListActivity(navController: NavHostController) {
+    val schoolList = listOf(
+        School(name = "Jawahar Navodaya Vidyalaya, Bagalur", destination = "NetNavActivity"),
+        School(name = "Parikrma School, Sahakara Nagar", destination = "NetNavActivity"),
+        School(name = "Army Public School, JC Nagar", destination = "NetNavActivity"),
+        School(name = "Bishop Cotton Boys' School, Residency Road", destination = "NetNavActivity"),
+        School(name = "Baldwin Boys' High School, Richmond Town", destination = "NetNavActivity"),
+        School(name = "Delhi Public School, North", destination = "NetNavActivity"),
+        School(name = "Inventure Academy, Whitefield", destination = "NetNavActivity"),
+        School(name = "Vidya Niketan School, Hebbal", destination = "NetNavActivity"),
+        School(name = "St. Joseph's Boys' High School, Museum Road", destination = "NetNavActivity"),
+        School(name = "Mallya Aditi International School, Yelahanka", destination = "NetNavActivity"),
+        School(name = "Ryan International School, Kundalahalli", destination = "NetNavActivity"),
+        School(name = "The International School Bangalore (TISB), Domlur", destination = "NetNavActivity")
+        // Add more schools as needed
+    )
+
     Column {
-        Image(painter = painterResource(id = R.drawable.all_pic), contentDescription =null ,
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop)
+        Image(
+            painter = painterResource(id = R.drawable.all_pic), contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.fillMaxSize()
+        )
     }
-
-
-    Spacer(modifier = Modifier.height(16.dp))
-
-    Column(
+    LazyColumn(
         modifier = Modifier
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.SpaceEvenly,
+        verticalArrangement = Arrangement.Center,
 
+    ) {
 
-        ) {
-        Spacer(modifier = Modifier.height(50.dp))
-
-
-        Box(modifier = Modifier
-            .fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(16.dp))){
-            Button(
-                onClick = { navController.navigate("NetNavActivity") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(100.dp)
-                    .background(Color(0x906d597a))
-                ,
-                colors = ButtonDefaults.buttonColors(
-                    Color.Transparent
-                ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
-            ) {
-                Text(
-                    text = "Station",
-                    fontSize = 30.sp
-                )
-            }
+        item {
+            Spacer(modifier = Modifier.height(100.dp))
+            Text(text = "List Of Stations",
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(android.graphics.Color.parseColor("#ffea00")))
+            Spacer(modifier = Modifier.height(40.dp))
         }
 
-
-        Box(modifier = Modifier
-            .fillMaxWidth(0.95f)
-            .clip(RoundedCornerShape(16.dp))){
-            Button(
-                onClick = { navController.navigate("NetNavActivity") },
+        items(schoolList) { school ->
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(100.dp)
-                    .background(Color(0x906d597a))
-                ,
-                colors = ButtonDefaults.buttonColors(
-                    Color.Transparent
-                ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
+                    .fillMaxWidth(0.95f)
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable { navController.navigate(school.destination) }
             ) {
-                Text(
-                    text = "Station",
-                    fontSize = 30.sp
-                )
+                Button(
+                    onClick = { navController.navigate(school.destination) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(100.dp)
+                        .background(Color(0x906d597a)),
+                    colors = ButtonDefaults.buttonColors(
+                        Color.Transparent
+                    ),
+                ) {
+                    Text(
+                        text = school.name,
+                        fontSize = 25.sp,
+                        fontWeight = FontWeight.Normal,
+                        color = Color.White
+                    )
+                }
             }
+            Spacer(modifier = Modifier.height(16.dp))
         }
 
-        Box(modifier = Modifier
-            .width(250.dp)
-            .padding(16.dp)
-            .clip(RoundedCornerShape(50.dp))){
-            Button(
-                onClick = { navController.popBackStack()},
+        item {
+            Box(
                 modifier = Modifier
                     .width(250.dp)
-                    .height(50.dp)
+                    .padding(16.dp)
                     .clip(RoundedCornerShape(50.dp)),
-                colors = ButtonDefaults.buttonColors(
-                    Color.Transparent
-                ),
             ) {
-                Text(
-                    text = "Go Back",
-                    fontSize = 20.sp
-
-                )
+                Button(
+                    onClick = { navController.popBackStack() },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp)
+                        .clip(RoundedCornerShape(50.dp)),
+                    colors = ButtonDefaults.buttonColors(
+                        Color.Transparent
+                    ),
+                ) {
+                    Text(
+                        text = "Go Back",
+                        fontSize = 20.sp
+                    )
+                }
             }
         }
     }

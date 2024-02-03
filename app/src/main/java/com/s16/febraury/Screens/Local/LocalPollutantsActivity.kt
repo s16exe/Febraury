@@ -370,7 +370,8 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                         ) {
                             Box(modifier = Modifier
                                 .fillMaxWidth(0.30f)
-                                .fillMaxHeight(0.50f)) {
+                                .fillMaxHeight(0.50f)
+                            ) {
                                 Text(
                                     text = "15%",
                                     color = Color.White,
