@@ -103,13 +103,12 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.25f),
+                                                .fillMaxWidth(0.35f),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            Text(
-                                                text = "CO",
-                                                color = Color.White,
-                                                style = TextStyle(fontSize = 40.sp)
+                                            Image(
+                                                painter = painterResource(id = R.drawable.co), contentDescription = null,
+
                                             )
                                         }
                                     }
@@ -152,14 +151,13 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.27f),
+                                                .fillMaxWidth(0.35f),
                                             contentAlignment = Alignment.Center
                                         ) {
-                                            Text(
-                                                text = "CO₂",
-                                                color = Color.White,
-                                                style = TextStyle(fontSize = 35.sp)
-                                            )
+                                            Image(
+                                                painter = painterResource(id = R.drawable.co2), contentDescription = null,
+
+                                                )
                                         }
                                     }
                                 }
@@ -200,15 +198,14 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.40f),
+                                                .fillMaxWidth(0.35f),
                                             contentAlignment = Alignment.Center
                                         ) {
 
-                                            Text(
-                                                text = "CH₄",
-                                                color = Color.White,
-                                                style = TextStyle(fontSize = 40.sp)
-                                            )
+                                            Image(
+                                                painter = painterResource(id = R.drawable.ch4), contentDescription = null,
+
+                                                )
                                         }
                                     }
                                 }
@@ -230,28 +227,35 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     .fillMaxWidth()
                                     .height(70.dp)
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth(0.25f),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = "Sulphur Dioxide",
-                                        color = Color.White,
-                                        style = TextStyle(fontSize = 18.sp)
-                                    )
+                                LazyColumn {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(0.25f),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Text(
+                                                text = "Sulphur Dioxide",
+                                                color = Color.White,
+                                                style = TextStyle(fontSize = 18.sp)
+                                            )
+                                        }
+                                    }
                                 }
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth(0.40f),
-                                    contentAlignment = Alignment.Center
-                                ) {
+                                LazyColumn {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(0.35f),
+                                            contentAlignment = Alignment.Center
+                                        ) {
 
-                                    Text(
-                                        text = "SO₂",
-                                        color = Color.White,
-                                        style = TextStyle(fontSize = 40.sp)
-                                    )
+                                            Image(
+                                                painter = painterResource(id = R.drawable.so2), contentDescription = null,
+
+                                                )
+                                        }
+                                    }
                                 }
                                 Box(
                                     modifier = Modifier.fillMaxWidth(0.40f),
@@ -260,7 +264,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     Text(
                                         text = "40%",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 27.sp)
+                                        style = TextStyle(fontSize = 30.sp)
                                     )
                                 }
                             }
@@ -271,28 +275,35 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     .fillMaxWidth()
                                     .height(70.dp)
                             ) {
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth(0.25f),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = "Nitric Oxide",
-                                        color = Color.White,
-                                        style = TextStyle(fontSize = 18.sp)
-                                    )
+                                LazyColumn {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(0.25f),
+                                            contentAlignment = Alignment.Center
+                                        ) {
+                                            Text(
+                                                text = "Nitric Oxide",
+                                                color = Color.White,
+                                                style = TextStyle(fontSize = 18.sp)
+                                            )
+                                        }
+                                    }
                                 }
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth(0.40f),
-                                    contentAlignment = Alignment.Center
-                                ) {
+                                LazyColumn {
+                                    item {
+                                        Box(
+                                            modifier = Modifier
+                                                .fillMaxWidth(0.35f),
+                                            contentAlignment = Alignment.Center
+                                        ) {
 
-                                    Text(
-                                        text = "NO",
-                                        color = Color.White,
-                                        style = TextStyle(fontSize = 40.sp)
-                                    )
+                                            Image(
+                                                painter = painterResource(id = R.drawable.no), contentDescription = null,
+
+                                                )
+                                        }
+                                    }
                                 }
                                 Box(
                                     modifier = Modifier.fillMaxWidth(0.40f),
@@ -301,10 +312,12 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     Text(
                                         text = "9%",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 27.sp)
+                                        style = TextStyle(fontSize = 30.sp)
                                     )
                                 }
                             }
+
+                            
                         }
                     }
                 }
