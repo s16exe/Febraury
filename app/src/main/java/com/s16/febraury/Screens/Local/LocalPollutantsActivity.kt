@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -39,7 +40,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
 
     Column {
         Image(
-            painter = painterResource(id = R.drawable.pollution), contentDescription = null,
+            painter = painterResource(id = R.drawable.background11), contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
         )
@@ -52,7 +53,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
             ) {
                 Text(
                     text = "POLLUTANTS",
-                    color = Color.DarkGray,
+                    color = Color.Gray,
                     style = TextStyle(fontSize = 40.sp, fontWeight = FontWeight.Bold)
                 )
                 Column(
@@ -68,7 +69,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                         modifier = Modifier
                             .fillMaxWidth(0.80f)
                             .clip(RoundedCornerShape(30.dp))
-                            .background(Color(0x665F4638))
+                            .background(Color(0x996B635F))
                     )
                     {
                         Column(
@@ -103,18 +104,18 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.35f),
+                                                .fillMaxWidth(0.30f),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Image(
-                                                painter = painterResource(id = R.drawable.co), contentDescription = null,
-
+                                                painter = painterResource(id = R.drawable.cowbg), contentDescription = null,
+                                                colorFilter= ColorFilter.tint(Color.White)
                                             )
                                         }
                                     }
                                 }
                                 Box(
-                                    modifier = Modifier.fillMaxWidth(0.40f),
+                                    modifier = Modifier.fillMaxWidth(0.45f),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -151,18 +152,18 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.35f),
+                                                .fillMaxWidth(0.30f),
                                             contentAlignment = Alignment.Center
                                         ) {
                                             Image(
-                                                painter = painterResource(id = R.drawable.co2), contentDescription = null,
-
+                                                painter = painterResource(id = R.drawable.co2wbg), contentDescription = null,
+                                                colorFilter= ColorFilter.tint(Color.White)
                                                 )
                                         }
                                     }
                                 }
                                 Box(
-                                    modifier = Modifier.fillMaxWidth(0.40f),
+                                    modifier = Modifier.fillMaxWidth(0.45f),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -198,19 +199,19 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.35f),
+                                                .fillMaxWidth(0.30f),
                                             contentAlignment = Alignment.Center
                                         ) {
 
                                             Image(
-                                                painter = painterResource(id = R.drawable.ch4), contentDescription = null,
-
-                                                )
+                                                painter = painterResource(id = R.drawable.ch4wbg), contentDescription = null,
+                                                colorFilter= ColorFilter.tint(Color.White)
+                                            )
                                         }
                                     }
                                 }
                                 Box(
-                                    modifier = Modifier.fillMaxWidth(0.40f),
+                                    modifier = Modifier.fillMaxWidth(0.45f),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -246,19 +247,19 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.35f),
+                                                .fillMaxWidth(0.30f),
                                             contentAlignment = Alignment.Center
                                         ) {
 
                                             Image(
-                                                painter = painterResource(id = R.drawable.so2), contentDescription = null,
-
+                                                painter = painterResource(id = R.drawable.so2wbg), contentDescription = null,
+                                                colorFilter= ColorFilter.tint(Color.White)
                                                 )
                                         }
                                     }
                                 }
                                 Box(
-                                    modifier = Modifier.fillMaxWidth(0.40f),
+                                    modifier = Modifier.fillMaxWidth(0.45f),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -294,19 +295,19 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.35f),
+                                                .fillMaxWidth(0.30f),
                                             contentAlignment = Alignment.Center
                                         ) {
 
                                             Image(
-                                                painter = painterResource(id = R.drawable.no), contentDescription = null,
-
+                                                painter = painterResource(id = R.drawable.nowbg), contentDescription = null,
+                                                colorFilter= ColorFilter.tint(Color.White)
                                                 )
                                         }
                                     }
                                 }
                                 Box(
-                                    modifier = Modifier.fillMaxWidth(0.40f),
+                                    modifier = Modifier.fillMaxWidth(0.45f),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
@@ -326,7 +327,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxWidth(0.80f)
                         .clip(RoundedCornerShape(30.dp))
-                        .background(Color(0x665F4638))
+                        .background(Color(0x996B635F))
                 )
                 {
                     Row(
