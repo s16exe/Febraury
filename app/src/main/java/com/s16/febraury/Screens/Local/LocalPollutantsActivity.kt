@@ -47,6 +47,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
     }
     LazyColumn {
         item {
+            Spacer(modifier = Modifier.height(10.dp))
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.SpaceEvenly
@@ -56,6 +57,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                     color = Color.Gray,
                     style = TextStyle(fontSize = 40.sp, fontWeight = FontWeight.Bold)
                 )
+                Spacer(modifier = Modifier.height(8.dp))
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -313,20 +315,21 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth(0.90f)
+                        .clip(RoundedCornerShape(30.dp))
+                        .background(Color(0x996B635F))
                 )
                 {
                     Row(
                         horizontalArrangement = Arrangement.SpaceAround,
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
-                            .fillMaxWidth()
+                            .fillMaxWidth(0.98f)
                             .height(150.dp)
                     ) {
                         Box(
-                            modifier = Modifier.fillMaxWidth(0.30f)
+                            modifier = Modifier
+                                .fillMaxWidth(0.30f)
                                 .fillMaxHeight(0.98f)
-                                .clip(RoundedCornerShape(30.dp))
-                                .background(Color(0x996B635F))
                         ) {
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -334,91 +337,86 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                             ) {
                                 Box(modifier = Modifier.fillMaxHeight(0.30f))
                                 Box(
-                                    modifier = Modifier.fillMaxHeight()
+                                    modifier = Modifier
+                                        .fillMaxHeight()
                                         .fillMaxWidth()
-                                        .padding(10.dp,0.dp)){
-
-                                        Text(
-                                            text = "Particulate Matter",
-                                            color = Color.White,
-                                            style = TextStyle(fontSize = 18.sp)
-                                        )
+                                        .padding(10.dp, 0.dp)
+                                ) {
+                                    Text(
+                                        text = "Particulate Matter",
+                                        color = Color.White,
+                                        style = TextStyle(fontSize = 18.sp)
+                                    )
                                 }
                                 Box(modifier = Modifier.fillMaxHeight(0.40f))
                             }
                         }
-                        Box(
-                            modifier = Modifier.fillMaxWidth(0.70f)
-                                .fillMaxHeight(0.98f)
-                                .clip(RoundedCornerShape(30.dp))
-                                .background(Color(0x996B635F))
+
+                        Row(
+                            horizontalArrangement = Arrangement.SpaceAround,
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier
+                                .fillMaxHeight()
+                                .fillMaxWidth()
                         ) {
-                            Row(
-                                horizontalArrangement = Arrangement.SpaceAround,
-                                verticalAlignment = Alignment.CenterVertically,
-                                modifier = Modifier.fillMaxHeight().fillMaxWidth()
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center
                             ) {
-                                Column(
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    verticalArrangement = Arrangement.Center
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth(0.30f)
+                                        .fillMaxHeight(0.50f)
                                 ) {
-                                    Box(
-                                        modifier = Modifier
-                                            .fillMaxWidth(0.40f)
-                                            .fillMaxHeight(0.50f)
-                                    ) {
-                                        Text(
-                                            text = "PM2.5",
-                                            color = Color.White,
-                                            style = TextStyle(fontSize = 18.sp)
-                                        )
-                                    }
-                                    Box(
-                                        modifier = Modifier
-                                            .fillMaxWidth(0.40f)
-                                            .fillMaxHeight(0.50f)
-                                    ) {
-                                        Text(
-                                            text = "PM10",
-                                            color = Color.White,
-                                            style = TextStyle(fontSize = 18.sp)
-                                        )
-                                    }
+                                    Text(
+                                        text = "PM2.5",
+                                        color = Color.White,
+                                        style = TextStyle(fontSize = 18.sp)
+                                    )
                                 }
-                                Column(
-                                    horizontalAlignment = Alignment.CenterHorizontally,
-                                    verticalArrangement = Arrangement.SpaceAround
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth(0.30f)
+                                        .fillMaxHeight(0.50f)
                                 ) {
-                                    Box(
-                                        modifier = Modifier
-                                            .fillMaxWidth(0.40f)
-                                            .fillMaxHeight(0.50f)
-                                    ) {
-                                        Text(
-                                            text = "15%",
-                                            color = Color.White,
-                                            style = TextStyle(fontSize = 18.sp)
-                                        )
-                                    }
-                                    Box(
-                                        modifier = Modifier
-                                            .fillMaxWidth(0.40f)
-                                            .fillMaxHeight(0.50f)
-                                    ) {
-                                        Text(
-                                            text = "25%",
-                                            color = Color.White,
-                                            style = TextStyle(fontSize = 18.sp)
-                                        )
-                                    }
+                                    Text(
+                                        text = "PM10",
+                                        color = Color.White,
+                                        style = TextStyle(fontSize = 18.sp)
+                                    )
+                                }
+                            }
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.SpaceAround
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth(0.30f)
+                                        .fillMaxHeight(0.50f)
+                                ) {
+                                    Text(
+                                        text = "15%",
+                                        color = Color.White,
+                                        style = TextStyle(fontSize = 18.sp)
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .fillMaxWidth(0.30f)
+                                        .fillMaxHeight(0.50f)
+                                ) {
+                                    Text(
+                                        text = "25%",
+                                        color = Color.White,
+                                        style = TextStyle(fontSize = 18.sp)
+                                    )
                                 }
                             }
                         }
                     }
                 }
             }
-
-
             Column(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.Bottom,
