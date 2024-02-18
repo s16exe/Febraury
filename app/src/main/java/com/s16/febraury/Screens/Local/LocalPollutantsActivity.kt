@@ -53,7 +53,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
             ) {
                 Text(
                     text = "POLLUTANTS",
-                    color = Color.Gray,
+                    color = Color.White,
                     style = TextStyle(fontSize = 40.sp, fontWeight = FontWeight.Bold)
                 )
                 Column(
