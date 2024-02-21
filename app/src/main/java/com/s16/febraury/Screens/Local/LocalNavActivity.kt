@@ -93,7 +93,7 @@ fun LocalNavActivity(navController: NavHostController) {
         Box(modifier = Modifier
             .width(250.dp)
             .padding(16.dp)
-            .clip(RoundedCornerShape(50.dp))){
+            .clip(RoundedCornerShape(50.dp))) {
             Button(
                 onClick = { navController.popBackStack()},
                 modifier = Modifier

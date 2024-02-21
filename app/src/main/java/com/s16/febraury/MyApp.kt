@@ -12,10 +12,7 @@ import com.s16.febraury.Screens.Network.*
 fun MyApp() {
     val navController = rememberNavController()
 
-    NavHost(navController, startDestination = "Login") {
-        composable("Login") {
-            LoginActivity(navController)
-        }
+    NavHost(navController, startDestination = "Introduction") {
         composable("LocalNetwork") {
             LocalNetwork(navController)
         }
@@ -43,6 +40,9 @@ fun MyApp() {
         }
         composable("NetPollutantsActivity") {
             NetPollutantsActivity(navController)
+        }
+        composable("Introduction") {
+            Introduction(navController)
         }
 
     }
