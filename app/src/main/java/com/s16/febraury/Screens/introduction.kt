@@ -3,6 +3,7 @@ package com.s16.febraury.Screens
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,6 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -55,7 +57,7 @@ fun Introduction(navController: NavHostController) {
             onClick = { navController.navigate("LocalNetwork") },
             modifier = Modifier
                 .width(250.dp)
-                .height(50.dp)
+                .height(70.dp)
                 .clip(RoundedCornerShape(30.dp)),
             colors = ButtonDefaults.buttonColors(
                 Color(android.graphics.Color.parseColor("#9900afb9"))
@@ -68,11 +70,14 @@ fun Introduction(navController: NavHostController) {
             )
         }
 
-        Text(
-            text = "*A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
-            color = Color.DarkGray,
-            fontSize = 13.sp,
-        )
+        Box(modifier = Modifier.fillMaxWidth(0.8f)){
+            Text(
+                text = "*A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
+                color = Color.DarkGray,
+                textAlign = TextAlign.Center,
+                fontSize = 13.sp,
+            )
+        }
 
     }
 }
