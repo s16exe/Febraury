@@ -76,8 +76,6 @@ fun NetNavActivity(navController: NavHostController) {
                 colors = ButtonDefaults.buttonColors(
                     Color.Transparent
                 ),
-                //colors = ButtonColors(
-                //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
             ) {
                 Text(
                     text = "Pollutants",
