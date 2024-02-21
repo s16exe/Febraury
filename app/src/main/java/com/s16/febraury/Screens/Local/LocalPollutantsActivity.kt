@@ -55,6 +55,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
     ) {
+        Spacer(modifier = Modifier.height(8.dp))
         Text(
             text = "POLLUTANTS",
             color = Color.White,
@@ -341,25 +342,21 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .fillMaxWidth(0.98f)
-                            .height(130.dp)
+                            .height(160.dp)
                     ) {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth(0.25f)
-                                .fillMaxHeight(0.98f)
-                        ) {
+
                             Column(
                                 horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.SpaceAround
+                                verticalArrangement = Arrangement.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth(0.25f)
+                                    .fillMaxHeight()
                             ) {
-                                Box(
-                                    modifier = Modifier.fillMaxHeight(0.30f)
-                                        .fillMaxWidth(0.50f)
-                                )
+
                                 Box(
                                     modifier = Modifier
-                                        .fillMaxHeight()
-                                        .fillMaxWidth()
+                                        .fillMaxSize(),
+                                    contentAlignment = Alignment.Center
                                 ) {
                                     Text(
                                         text = "Particulate Matter",
@@ -369,72 +366,65 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
+
+                            }
+
+
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center,
+                                modifier = Modifier
+                                    .fillMaxWidth(0.3f)
+                            ) {
                                 Box(
-                                    modifier = Modifier.fillMaxHeight(0.30f)
-                                        .fillMaxWidth(0.50f)
-                                )
+                                    contentAlignment = Alignment.Center,
+                                    modifier = Modifier.
+                                    fillMaxHeight(0.5f)
+                                ) {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.pm25),
+                                        contentDescription = null,
+                                        colorFilter = ColorFilter.tint(Color.White)
+                                    )
+                                }
+                                Box(
+                                    contentAlignment = Alignment.Center,
+
+                                ) {
+                                    Image(
+                                        painter = painterResource(id = R.drawable.pm10),
+                                        contentDescription = null,
+                                        colorFilter = ColorFilter.tint(Color.White)
+                                    )
+                                }
                             }
-                        }
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.Center
-                        ) {
-                            Box(
+                            Column(
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.SpaceAround,
                                 modifier = Modifier
-                                    .fillMaxWidth(0.40f)
-                                    .fillMaxHeight(0.40f),
-                                contentAlignment = Alignment.Center
+                                    .fillMaxHeight()
+                                    .fillMaxWidth(0.45f)
                             ) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.pm25),
-                                    contentDescription = null,
-                                    colorFilter = ColorFilter.tint(Color.White)
-                                )
-                            }
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth(0.67f)
-                                    .fillMaxHeight(0.67f),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Image(
-                                    painter = painterResource(id = R.drawable.pm10),
-                                    contentDescription = null,
-                                    colorFilter = ColorFilter.tint(Color.White)
-                                )
-                            }
-                        }
-                        Column(
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.SpaceAround
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth(0.40f)
-                                    .fillMaxHeight(0.40f)
-                            ) {
+
                                 Text(
                                     text = "15%",
                                     color = Color.White,
-                                    style = TextStyle(fontSize = 18.sp),
+                                    style = TextStyle(fontSize = 25.sp),
                                     textAlign = TextAlign.Center,
                                     fontFamily = FontFamily(Font(R.font.regular))
                                 )
-                            }
-                            Box(
-                                modifier = Modifier
-                                    .fillMaxWidth(0.50f)
-                                    .fillMaxHeight(0.40f)
-                            ) {
+
+
                                 Text(
                                     text = "25%",
                                     color = Color.White,
-                                    style = TextStyle(fontSize = 18.sp),
+                                    style = TextStyle(fontSize = 25.sp),
                                     textAlign = TextAlign.Center,
                                     fontFamily = FontFamily(Font(R.font.regular))
                                 )
+
                             }
-                        }
+
                     }
                 }
             }
