@@ -62,14 +62,16 @@ fun NetCityActivity(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
-                        .clip(RoundedCornerShape(50.dp)),
+                        .clip(RoundedCornerShape(50.dp))
+                        ,
                     colors = ButtonDefaults.buttonColors(
                         Color.Transparent
                     ),
                 ) {
                     Text(
                         text = "Go Back",
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        color = Color.LightGray
                     )
                 }
             }
@@ -88,15 +90,15 @@ fun CityButton(cityName: String, onClick: () -> Unit) {
             onClick = onClick,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(100.dp)
-                .background(Color(0x906d597a)),
+                .height(70.dp),
             colors = ButtonDefaults.buttonColors(
                 Color.Transparent
             ),
         ) {
             Text(
                 text = cityName,
-                fontSize = 30.sp
+                fontSize = 30.sp,
+                color = Color.White
             )
         }
     }

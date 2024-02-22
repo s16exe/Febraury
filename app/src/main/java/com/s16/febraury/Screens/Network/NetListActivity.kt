@@ -15,6 +15,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -77,7 +79,7 @@ fun NetListActivity(navController: NavHostController) {
                     onClick = { navController.navigate(school.destination) },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(70.dp),
+                        .height(100.dp),
                     colors = ButtonDefaults.buttonColors(
                         Color.Transparent
                     ),
@@ -85,6 +87,10 @@ fun NetListActivity(navController: NavHostController) {
                     Text(
                         text = school.name,
                         textAlign = TextAlign.Center,
+                        style = TextStyle(
+                            fontSize = 16.sp,
+                            lineHeight = 40.sp, // Adjust as needed for your font size
+                        ),
                         fontSize = 25.sp,
                         fontWeight = FontWeight.Normal,
                         color = Color.White
@@ -113,7 +119,8 @@ fun NetListActivity(navController: NavHostController) {
                 ) {
                     Text(
                         text = "Go Back",
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        color = Color.White
                     )
                 }
             }
