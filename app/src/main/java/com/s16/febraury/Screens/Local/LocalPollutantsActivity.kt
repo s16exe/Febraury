@@ -51,6 +51,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
     Spacer(modifier = Modifier.height(10.dp))
     LazyColumn {
         item {
+            Spacer(modifier = Modifier.height(25.dp))
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.SpaceEvenly
@@ -95,7 +96,8 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.25f)
+                                                .fillMaxWidth(0.25f),
+                                            contentAlignment = Alignment.Center
                                         ) {
 
                                             Text(
@@ -143,7 +145,8 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     item {
                                         Box(
                                             modifier = Modifier
-                                                .fillMaxWidth(0.25f)
+                                                .fillMaxWidth(0.25f),
+                                            contentAlignment = Alignment.Center
                                         ) {
                                             Text(
                                                 text = "Carbon Dioxide",
@@ -428,6 +431,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(25.dp))
 
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -455,8 +459,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                     ) {
                         Text(
                             text = "Go Back",
-                            fontSize = 20.sp
-
+                            fontSize = 20.sp,
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }

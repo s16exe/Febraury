@@ -14,6 +14,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,7 +44,9 @@ fun NetCityActivity(navController: NavHostController) {
             Text(text = "List Of Cities",
                 fontSize = 30.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(android.graphics.Color.parseColor("#ffea00")))
+                color = Color(android.graphics.Color.parseColor("#ffea00")),
+                fontFamily = FontFamily(Font(R.font.regular))
+            )
             Spacer(modifier = Modifier.height(40.dp))
         }
         items(cityList) { city ->
@@ -62,14 +66,17 @@ fun NetCityActivity(navController: NavHostController) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
-                        .clip(RoundedCornerShape(50.dp)),
+                        .clip(RoundedCornerShape(50.dp))
+                        ,
                     colors = ButtonDefaults.buttonColors(
                         Color.Transparent
                     ),
                 ) {
                     Text(
                         text = "Go Back",
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        color = Color.LightGray,
+                        fontFamily = FontFamily(Font(R.font.regular))
                     )
                 }
             }
@@ -88,15 +95,16 @@ fun CityButton(cityName: String, onClick: () -> Unit) {
             onClick = onClick,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(100.dp)
-                .background(Color(0x906d597a)),
+                .height(70.dp),
             colors = ButtonDefaults.buttonColors(
                 Color.Transparent
             ),
         ) {
             Text(
                 text = cityName,
-                fontSize = 30.sp
+                fontSize = 30.sp,
+                color = Color.White,
+                fontFamily = FontFamily(Font(R.font.regular))
             )
         }
     }
