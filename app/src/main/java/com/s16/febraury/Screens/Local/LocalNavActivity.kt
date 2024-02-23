@@ -13,6 +13,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -45,7 +47,8 @@ fun LocalNavActivity(navController: NavHostController) {
                 Text(text = "Local Conditions",
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(android.graphics.Color.parseColor("#ffea00")))
+                    color = Color(android.graphics.Color.parseColor("#ffea00")),
+                    fontFamily = FontFamily(Font(R.font.regular)))
             }
             Spacer(modifier = Modifier.height(80.dp))
 
@@ -71,7 +74,8 @@ Row (modifier = Modifier
             Text(
                 text = "Weather",
                 fontSize = 30.sp,
-                color = Color.White
+                color = Color.White,
+                fontFamily = FontFamily(Font(R.font.regular))
             )
         }
     }
@@ -101,7 +105,8 @@ Row (modifier = Modifier
                         Text(
                             text = "Pollutants",
                             fontSize = 30.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -130,8 +135,8 @@ Row (modifier = Modifier
                         Text(
                             text = "Go Back",
                             fontSize = 20.sp,
-                            color = Color.White
-
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }

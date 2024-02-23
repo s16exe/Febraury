@@ -13,6 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -43,7 +45,8 @@ fun NetNavActivity(navController: NavHostController) {
             Text(text = "Station Conditions",
                 fontWeight = FontWeight.Bold,
                 fontSize = 35.sp,
-                color = Color(android.graphics.Color.parseColor("#ffe66d"))
+                color = Color(android.graphics.Color.parseColor("#ffe66d")),
+                fontFamily = FontFamily(Font(R.font.regular))
             )
             Spacer(modifier = Modifier.height(80.dp))
 
@@ -64,7 +67,8 @@ fun NetNavActivity(navController: NavHostController) {
                     Text(
                         text = "Temperature",
                         fontSize = 30.sp,
-                        color = Color.White
+                        color = Color.White,
+                        fontFamily = FontFamily(Font(R.font.regular))
                     )
                 }
             }
@@ -85,7 +89,8 @@ fun NetNavActivity(navController: NavHostController) {
                     Text(
                         text = "Pollutants",
                         fontSize = 30.sp,
-                        color = Color.White
+                        color = Color.White,
+                        fontFamily = FontFamily(Font(R.font.regular))
                     )
                 }
             }
@@ -110,8 +115,8 @@ fun NetNavActivity(navController: NavHostController) {
                     Text(
                         text = "Go Back",
                         fontSize = 20.sp,
-                        color = Color.White
-
+                        color = Color.White,
+                        fontFamily = FontFamily(Font(R.font.regular))
                     )
                 }
             }

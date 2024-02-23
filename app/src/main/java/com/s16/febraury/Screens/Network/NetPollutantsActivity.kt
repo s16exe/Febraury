@@ -461,7 +461,8 @@ fun NetPollutantsActivity(navController: NavHostController) {
                         Text(
                             text = "Go Back",
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
 
                         )
                     }

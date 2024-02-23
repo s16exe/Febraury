@@ -23,6 +23,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -69,7 +71,8 @@ fun Introduction(navController: NavHostController) {
                 Text(
                     text = "Get Started",
                     fontSize = 30.sp,
-                    color = Color.Black
+                    color = Color.Black,
+                    fontFamily = FontFamily(Font(R.font.regular))
                 )
             }
             Spacer(modifier = Modifier.height(120.dp))
@@ -80,6 +83,7 @@ fun Introduction(navController: NavHostController) {
                     color = Color.DarkGray,
                     textAlign = TextAlign.Center,
                     fontSize = 13.sp,
+                    fontFamily = FontFamily(Font(R.font.regular))
                 )
             }
             Spacer(modifier = Modifier.height(30.dp))
