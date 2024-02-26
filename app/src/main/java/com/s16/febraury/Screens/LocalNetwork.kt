@@ -133,9 +133,5 @@ fun LocalNetwork(navController: NavHostController) {
             }
         }
 
-
     }
-
-
-
 }
