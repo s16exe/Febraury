@@ -78,13 +78,29 @@ fun Introduction(navController: NavHostController) {
             Spacer(modifier = Modifier.height(120.dp))
 
             Box(modifier = Modifier.fillMaxWidth(0.8f)){
-                Text(
-                    text = "*A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
-                    color = Color.DarkGray,
-                    textAlign = TextAlign.Center,
-                    fontSize = 13.sp,
-                    fontFamily = FontFamily(Font(R.font.regular))
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.SpaceAround
+                ){
+                    Text(
+                        text = "*A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
+                        color = Color.DarkGray,
+                        textAlign = TextAlign.Center,
+                        fontSize = 13.sp,
+                        fontFamily = FontFamily(Font(R.font.regular))
+                    )
+
+                    Image(
+                    painter = painterResource(id = R.drawable.ieee),
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .width(150.dp)
                 )
+                }
             }
             Spacer(modifier = Modifier.height(30.dp))
         }
