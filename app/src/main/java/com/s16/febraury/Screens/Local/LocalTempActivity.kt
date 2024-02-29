@@ -164,6 +164,64 @@ fun LocalTempActivity(navController: NavHostController) {
             }
         }
 
+        item {
+            Spacer(modifier = Modifier.height(8.dp))
+            Box(
+                modifier = Modifier
+                    .height(70.dp)
+                    .fillMaxWidth(0.95f)
+                    .clip(shape = RoundedCornerShape(20.dp))
+                    .background(Color.DarkGray.copy(alpha = 0.4f))
+                    .padding(2.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceAround,
+                    modifier = Modifier.fillMaxSize()
+                )
+                {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.3f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "Wind Direction",
+                            color = Color.White,
+                            fontSize = 20.sp,
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.25f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.wind_direction),
+                            contentDescription = null,
+                            modifier = Modifier.size(30.dp),
+                            colorFilter = ColorFilter.tint(Color.White)
+                        )
+                    }
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth(0.40f)
+                            .fillMaxHeight(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = "NE",
+                            color = Color.White,
+                            fontSize = 20.sp
+                        )
+                    }
+                }
+            }
+        }
+
 
         item {
             Spacer(modifier = Modifier.height(8.dp))
