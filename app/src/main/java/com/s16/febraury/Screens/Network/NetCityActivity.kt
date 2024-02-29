@@ -115,9 +115,6 @@ val cityList = listOf(
     "MUMBAI",
     "DELHI",
     "CHENNAI",
-    "HYDERABAD",
     "KOLKATA",
-    "PUNE",
-    "AHMEDABAD",
-    "COIMBATORE"
+    "AHMEDABAD"
 )

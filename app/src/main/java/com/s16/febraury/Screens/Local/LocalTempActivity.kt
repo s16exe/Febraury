@@ -301,13 +301,13 @@ fun LocalTempActivity(navController: NavHostController) {
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.3f)
+                            .fillMaxWidth(0.4f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Text(
-                            text = "Pressure",
+                            text = "Atmospheric Pressure",
                             fontSize = 20.sp,
                             color = Color.White
                         )

@@ -25,7 +25,7 @@ import com.s16.febraury.R
 @Composable
 fun NetNavActivity(navController: NavHostController) {
     Column {
-        Image(painter = painterResource(id = R.drawable.mountain), contentDescription =null ,
+        Image(painter = painterResource(id = R.drawable.city_mountain), contentDescription =null ,
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop)
     }
@@ -42,7 +42,7 @@ fun NetNavActivity(navController: NavHostController) {
         item {
 
 
-            Text(text = "Station Conditions",
+            Text(text = "Remote Conditions",
                 fontWeight = FontWeight.Bold,
                 fontSize = 35.sp,
                 color = Color(android.graphics.Color.parseColor("#ffe66d")),
@@ -56,7 +56,7 @@ fun NetNavActivity(navController: NavHostController) {
                     onClick = { navController.navigate("StationTempActivity") },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(100.dp).background(Color(0x70a54c14))
+                        .height(100.dp).background(Color(0x9077a6b6))
                     ,
                     colors = ButtonDefaults.buttonColors(
                         Color.Transparent
@@ -65,7 +65,7 @@ fun NetNavActivity(navController: NavHostController) {
                     //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
                 ) {
                     Text(
-                        text = "Temperature",
+                        text = "Weather",
                         fontSize = 30.sp,
                         color = Color.White,
                         fontFamily = FontFamily(Font(R.font.regular))
@@ -80,14 +80,14 @@ fun NetNavActivity(navController: NavHostController) {
                     onClick = { navController.navigate("NetPollutantsActivity") },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(100.dp).background(Color(0x669B48E4))
+                        .height(100.dp).background(Color(0x50fed0bb))
                     ,
                     colors = ButtonDefaults.buttonColors(
                         Color.Transparent
                     ),
                 ) {
                     Text(
-                        text = "Pollutants",
+                        text = "Air Pollution",
                         fontSize = 30.sp,
                         color = Color.White,
                         fontFamily = FontFamily(Font(R.font.regular))

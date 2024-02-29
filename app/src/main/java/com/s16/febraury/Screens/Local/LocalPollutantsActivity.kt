@@ -58,7 +58,7 @@ fun LocalPollutantsActivity(navController: NavHostController) {
     ) {
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "POLLUTANTS",
+            text = "AIR POLLUTION",
             color = Color.White,
             style = TextStyle(fontSize = 40.sp, fontWeight = FontWeight.Bold),
             fontFamily = FontFamily(Font(R.font.regular))

@@ -103,7 +103,7 @@ Row (modifier = Modifier
                         //backgroundColor = Color(android.graphics.Color.parseColor("#2196F3"))),
                     ) {
                         Text(
-                            text = "Pollutants",
+                            text = "Air Pollution",
                             fontSize = 30.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))

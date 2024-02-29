@@ -32,16 +32,20 @@ fun NetListActivity(navController: NavHostController) {
     val schoolList = listOf(
         School(name = "Jawahar Navodaya Vidyalaya, Bagalur", destination = "NetNavActivity"),
         School(name = "Parikrma School, Sahakara Nagar", destination = "NetNavActivity"),
-        School(name = "Army Public School, JC Nagar", destination = "NetNavActivity"),
-        School(name = "Bishop Cotton Boys' School, Residency Road", destination = "NetNavActivity"),
-        School(name = "Baldwin Boys' High School, Richmond Town", destination = "NetNavActivity"),
-        School(name = "Delhi Public School, North", destination = "NetNavActivity"),
-        School(name = "Inventure Academy, Whitefield", destination = "NetNavActivity"),
-        School(name = "Vidya Niketan School, Hebbal", destination = "NetNavActivity"),
-        School(name = "St. Joseph's Boys' High School, Museum Road", destination = "NetNavActivity"),
-        School(name = "Mallya Aditi International School, Yelahanka", destination = "NetNavActivity"),
-        School(name = "Ryan International School, Kundalahalli", destination = "NetNavActivity"),
-        School(name = "The International School Bangalore (TISB), Domlur", destination = "NetNavActivity")
+        School(name = "Vijaya Bharati Public School,RT Nagar", destination = "NetNavActivity"),
+        School(name = "Kendriya Vidyalaya,Malleshwaram", destination = "NetNavActivity"),
+
+        //School(name = "Army Public School, JC Nagar", destination = "NetNavActivity"),
+        //School(name = "Delhi Public School, North", destination = "NetNavActivity"),
+       //School(name = "Bishop Cotton Boys' School, Residency Road", destination = "NetNavActivity"),
+        //School(name = "Baldwin Boys' High School, Richmond Town", destination = "NetNavActivity"),
+        //School(name = "Inventure Academy, Whitefield", destination = "NetNavActivity"),
+        //School(name = "Vidya Niketan School, Hebbal", destination = "NetNavActivity"),
+        //School(name = "St. Joseph's Boys' High School, Museum Road", destination = "NetNavActivity"),
+        //School(name = "Mallya Aditi International School, Yelahanka", destination = "NetNavActivity"),
+        //School(name = "Ryan International School, Kundalahalli", destination = "NetNavActivity"),
+        //School(name = "The International School Bangalore (TISB), Domlur", destination = "NetNavActivity"),
+
         // Add more schools as needed
     )
 
