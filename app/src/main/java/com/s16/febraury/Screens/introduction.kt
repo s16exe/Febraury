@@ -86,7 +86,7 @@ fun Introduction(navController: NavHostController) {
                     verticalArrangement = Arrangement.SpaceAround
                 ){
                     Text(
-                        text = "*A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
+                        text = "A project centered around students, aimed at studying climate change by deploying a network of micro-weather and pollution monitoring stations. Sponsored by IEEE HTC.",
                         color = Color.DarkGray,
                         textAlign = TextAlign.Center,
                         fontSize = 13.sp,
