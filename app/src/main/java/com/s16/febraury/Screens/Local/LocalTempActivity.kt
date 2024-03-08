@@ -35,9 +35,28 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.s16.febraury.R
 
-
+sealed class WeatherCondition {
+    object Sunny : WeatherCondition()
+    object Clear : WeatherCondition()
+    object Rainy : WeatherCondition()
+    object Storm : WeatherCondition()
+    object Snowy : WeatherCondition()
+}
 @Composable
-fun LocalTempActivity(navController: NavHostController) {
+fun LocalTempActivity(
+    navController: NavHostController,
+    currentWeather: WeatherCondition,
+    backgroundResource: Any
+)
+{
+    val backgroundResource = when (currentWeather)
+    {
+        is WeatherCondition.Sunny -> R.drawable.sunnycity1
+        is WeatherCondition.Clear -> R.drawable.clear
+        is WeatherCondition.Rainy -> R.drawable.rain1
+        is WeatherCondition.Storm -> R.drawable.heavyrain
+        is WeatherCondition.Snowy -> R.drawable.snowy1
+    }
 
     Column(
         modifier = Modifier
@@ -47,7 +66,7 @@ fun LocalTempActivity(navController: NavHostController) {
     ) {
         Image(
             modifier = Modifier.fillMaxSize(),
-            painter = painterResource(id = R.drawable.sunnycity1),
+            painter = painterResource(id = backgroundResource),
             contentDescription = "Weather Background",
             contentScale = ContentScale.Crop
         )
@@ -155,7 +174,7 @@ fun LocalTempActivity(navController: NavHostController) {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "13km/h",
+                            text = "6 km/h",
                             color = Color.White,
                             fontSize = 20.sp
                         )
@@ -242,7 +261,7 @@ fun LocalTempActivity(navController: NavHostController) {
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.3f)
+                            .fillMaxWidth(0.22f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
@@ -255,7 +274,7 @@ fun LocalTempActivity(navController: NavHostController) {
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.25f)
+                            .fillMaxWidth(0.45f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
@@ -275,7 +294,7 @@ fun LocalTempActivity(navController: NavHostController) {
                     )
                     {
                         Text(
-                            text = "72%",
+                            text = "33%",
                             fontSize = 20.sp,
                             color = Color.White,
                         )
@@ -301,7 +320,7 @@ fun LocalTempActivity(navController: NavHostController) {
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.4f)
+                            .fillMaxWidth(0.31f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
@@ -327,13 +346,13 @@ fun LocalTempActivity(navController: NavHostController) {
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.30f)
+                            .fillMaxWidth(0.38f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Text(
-                            text = "15psi",
+                            text = "923 hPa",
                             fontSize = 20.sp,
                             color = Color.White
                         )
@@ -360,7 +379,7 @@ fun LocalTempActivity(navController: NavHostController) {
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
-                            .fillMaxWidth(0.3f),
+                            .fillMaxWidth(0.25f),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -372,7 +391,7 @@ fun LocalTempActivity(navController: NavHostController) {
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
-                            .fillMaxWidth(0.25f),
+                            .fillMaxWidth(0.40f),
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
@@ -389,7 +408,7 @@ fun LocalTempActivity(navController: NavHostController) {
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            text = "0%",
+                            text = "0 mm",
                             fontSize = 20.sp,
                             color = Color.White
                         )

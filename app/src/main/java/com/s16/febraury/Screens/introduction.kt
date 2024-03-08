@@ -50,7 +50,7 @@ fun Introduction(navController: NavHostController) {
         item {
             Spacer(modifier = Modifier.height(30.dp))
             Image(
-            painter = painterResource(id = R.drawable.logof),
+            painter = painterResource(id = R.drawable.logo3),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
