@@ -258,7 +258,7 @@ fun LocalTempActivity(
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.22f)
+                            .fillMaxWidth(0.3f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
@@ -317,7 +317,7 @@ fun LocalTempActivity(
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.31f)
+                            .fillMaxWidth(0.4f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
@@ -343,7 +343,7 @@ fun LocalTempActivity(
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.38f)
+                            .fillMaxWidth(0.5f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
