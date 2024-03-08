@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -98,6 +99,7 @@ fun LocalTempActivity(
                             text = "25°C",
                             color = Color.White,
                             fontSize = 70.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                         Spacer(modifier = Modifier.height(8.dp))
 
@@ -112,7 +114,7 @@ fun LocalTempActivity(
                             color = Color.White,
                             fontSize = 30.sp,
                             fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily.SansSerif,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -149,6 +151,7 @@ fun LocalTempActivity(
                             text = "Wind Speed",
                             color = Color.White,
                             fontSize = 20.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
@@ -173,7 +176,8 @@ fun LocalTempActivity(
                         Text(
                             text = "6 km/h",
                             color = Color.White,
-                            fontSize = 20.sp
+                            fontSize = 20.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -207,6 +211,7 @@ fun LocalTempActivity(
                             text = "Wind Direction",
                             color = Color.White,
                             fontSize = 20.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
@@ -231,7 +236,8 @@ fun LocalTempActivity(
                         Text(
                             text = "NE",
                             color = Color.White,
-                            fontSize = 20.sp
+                            fontSize = 20.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -267,6 +273,7 @@ fun LocalTempActivity(
                             text = "Humidity",
                             color = Color.White,
                             fontSize = 20.sp,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
@@ -294,6 +301,7 @@ fun LocalTempActivity(
                             text = "33%",
                             fontSize = 20.sp,
                             color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -325,7 +333,8 @@ fun LocalTempActivity(
                         Text(
                             text = "Atmospheric Pressure",
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
@@ -351,7 +360,8 @@ fun LocalTempActivity(
                         Text(
                             text = "923 hPa",
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
 
@@ -382,7 +392,8 @@ fun LocalTempActivity(
                         Text(
                             text = "Rainfall",
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
@@ -407,7 +418,8 @@ fun LocalTempActivity(
                         Text(
                             text = "0 mm",
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color.White,
+                            fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                 }
@@ -435,7 +447,8 @@ fun LocalTempActivity(
                 ) {
                     Text(
                         text = "Go Back",
-                        fontSize = 20.sp
+                        fontSize = 20.sp,
+                        fontFamily = FontFamily(Font(R.font.regular))
                     )
                 }
             }
