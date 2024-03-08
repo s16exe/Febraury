@@ -30,7 +30,6 @@ fun MyApp() {
                 is WeatherCondition.Rainy -> R.drawable.rain1
                 is WeatherCondition.Storm -> R.drawable.heavyrain
                 is WeatherCondition.Snowy -> R.drawable.snowy1
-                else -> {R.drawable.clear}
             }
 
             LocalTempActivity(navController,currentWeather,backgroundResource)
