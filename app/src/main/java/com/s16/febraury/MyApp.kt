@@ -11,6 +11,7 @@ import com.s16.febraury.Screens.Network.*
 @Composable
 fun MyApp() {
     val navController = rememberNavController()
+    val currentWeather = determineWeatherCondition()
 
     NavHost(navController, startDestination = "Introduction") {
         composable("LocalNetwork") {
@@ -21,18 +22,16 @@ fun MyApp() {
         }
 
         composable("LocalTempActivity") {
-            val currentWeather = determineWeatherCondition()
+
             val backgroundResource = when (currentWeather) {
                 is WeatherCondition.Sunny -> R.drawable.sunnycity1
                 is WeatherCondition.Clear -> R.drawable.clear
                 is WeatherCondition.Rainy -> R.drawable.rain1
                 is WeatherCondition.Storm -> R.drawable.heavyrain
                 is WeatherCondition.Snowy -> R.drawable.snowy1
-
-                else -> {
-                    R.drawable.clear
-                }
+                else -> {R.drawable.clear}
             }
+
             LocalTempActivity(navController,currentWeather,backgroundResource)
         }
         composable("LocalPollutantsActivity") {
@@ -59,4 +58,11 @@ fun MyApp() {
 
     }
 }
+
+fun determineWeatherCondition(): WeatherCondition {
+
+}
+
+
+
 

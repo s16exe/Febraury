@@ -46,18 +46,9 @@ sealed class WeatherCondition {
 fun LocalTempActivity(
     navController: NavHostController,
     currentWeather: WeatherCondition,
-    backgroundResource: Any
+    backgroundResource: Int
 )
 {
-    val backgroundResource = when (currentWeather)
-    {
-        is WeatherCondition.Sunny -> R.drawable.sunnycity1
-        is WeatherCondition.Clear -> R.drawable.clear
-        is WeatherCondition.Rainy -> R.drawable.rain1
-        is WeatherCondition.Storm -> R.drawable.heavyrain
-        is WeatherCondition.Snowy -> R.drawable.snowy1
-    }
-
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -111,7 +102,13 @@ fun LocalTempActivity(
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Text(
-                            text = "sunny",
+                            text = when (currentWeather) {
+                                is WeatherCondition.Sunny -> "Sunny"
+                                is WeatherCondition.Clear -> "Clear"
+                                is WeatherCondition.Rainy -> "Rainy"
+                                is WeatherCondition.Storm -> "Stormy"
+                                is WeatherCondition.Snowy -> "Snowy"
+                            },
                             color = Color.White,
                             fontSize = 30.sp,
                             fontWeight = FontWeight.Bold,
