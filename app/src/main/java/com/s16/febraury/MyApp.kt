@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import com.s16.febraury.Screens.*
 import com.s16.febraury.Screens.Local.*
 import com.s16.febraury.Screens.Network.*
+import kotlin.random.Random
 
 @Composable
 fun MyApp() {
@@ -60,7 +61,15 @@ fun MyApp() {
 }
 
 fun determineWeatherCondition(): WeatherCondition {
-
+    val randomWeatherCondition = when (Random.nextInt(5)) {
+        0 -> WeatherCondition.Sunny
+        1 -> WeatherCondition.Clear
+        2 -> WeatherCondition.Rainy
+        3 -> WeatherCondition.Storm
+        4 -> WeatherCondition.Snowy
+        else -> WeatherCondition.Clear // Default condition
+    }
+    return randomWeatherCondition
 }
 
 
