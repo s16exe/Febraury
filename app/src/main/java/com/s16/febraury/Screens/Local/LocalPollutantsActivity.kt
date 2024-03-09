@@ -126,9 +126,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
-                                        text = "40%",
+                                        text = "421ppm",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 25.sp),
+                                        style = TextStyle(fontSize = 16.sp),
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
@@ -174,9 +174,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
-                                        text = "18%",
+                                        text = "421ppm",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 25.sp),
+                                        style = TextStyle(fontSize = 16.sp),
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
@@ -223,9 +223,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
-                                        text = "6%",
+                                        text = "1000ppm",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 25.sp),
+                                        style = TextStyle(fontSize = 16.sp),
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
@@ -271,9 +271,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
-                                        text = "40%",
+                                        text = "1.05ppm",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 25.sp),
+                                        style = TextStyle(fontSize = 16.sp),
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
@@ -320,9 +320,9 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text(
-                                        text = "9%",
+                                        text = "0.05ppm",
                                         color = Color.White,
-                                        style = TextStyle(fontSize = 25.sp),
+                                        style = TextStyle(fontSize = 16.sp),
                                         fontFamily = FontFamily(Font(R.font.regular))
                                     )
                                 }
@@ -410,18 +410,18 @@ fun LocalPollutantsActivity(navController: NavHostController) {
                             ) {
 
                                 Text(
-                                    text = "15%",
+                                    text = "45µg/m³",
                                     color = Color.White,
-                                    style = TextStyle(fontSize = 25.sp),
+                                    style = TextStyle(fontSize = 16.sp),
                                     textAlign = TextAlign.Center,
                                     fontFamily = FontFamily(Font(R.font.regular))
                                 )
 
 
                                 Text(
-                                    text = "25%",
+                                    text = "84µg/m³",
                                     color = Color.White,
-                                    style = TextStyle(fontSize = 25.sp),
+                                    style = TextStyle(fontSize = 16.sp),
                                     textAlign = TextAlign.Center,
                                     fontFamily = FontFamily(Font(R.font.regular))
                                 )
