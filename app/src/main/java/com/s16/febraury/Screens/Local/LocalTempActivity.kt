@@ -150,7 +150,7 @@ fun LocalTempActivity(
                         Text(
                             text = "Wind Speed",
                             color = Color.White,
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
@@ -161,7 +161,7 @@ fun LocalTempActivity(
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.wind),
+                            painter = painterResource(id = R.drawable.wind9),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
                             colorFilter = ColorFilter.tint(Color.White)
@@ -176,7 +176,7 @@ fun LocalTempActivity(
                         Text(
                             text = "6 km/h",
                             color = Color.White,
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
@@ -210,7 +210,7 @@ fun LocalTempActivity(
                         Text(
                             text = "Wind Direction",
                             color = Color.White,
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
@@ -221,7 +221,7 @@ fun LocalTempActivity(
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.wind_direction),
+                            painter = painterResource(id = R.drawable.winddirection99),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
                             colorFilter = ColorFilter.tint(Color.White)
@@ -236,7 +236,7 @@ fun LocalTempActivity(
                         Text(
                             text = "NE",
                             color = Color.White,
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
@@ -272,19 +272,19 @@ fun LocalTempActivity(
                         Text(
                             text = "Humidity",
                             color = Color.White,
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.45f)
+                            .fillMaxWidth(0.25f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Image(
-                            painter = painterResource(id = R.drawable.humidity),
+                            painter = painterResource(id = R.drawable.humidity9),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
                             colorFilter = ColorFilter.tint(Color.White)
@@ -292,14 +292,14 @@ fun LocalTempActivity(
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.30f)
+                            .fillMaxWidth(0.40f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Text(
                             text = "33%",
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
@@ -325,14 +325,14 @@ fun LocalTempActivity(
                 ) {
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.4f)
+                            .fillMaxWidth(0.3f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Text(
                             text = "Atmospheric Pressure",
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
@@ -344,7 +344,7 @@ fun LocalTempActivity(
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.pressure),
+                            painter = painterResource(id = R.drawable.pressure99),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
                             colorFilter = ColorFilter.tint(Color.White)
@@ -352,14 +352,14 @@ fun LocalTempActivity(
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.5f)
+                            .fillMaxWidth(0.40f)
                             .fillMaxHeight(),
                         contentAlignment = Alignment.Center
                     )
                     {
                         Text(
                             text = "923 hPa",
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
@@ -386,12 +386,12 @@ fun LocalTempActivity(
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
-                            .fillMaxWidth(0.25f),
+                            .fillMaxWidth(0.3f),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = "Rainfall",
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
@@ -399,11 +399,11 @@ fun LocalTempActivity(
                     Box(
                         modifier = Modifier
                             .fillMaxHeight()
-                            .fillMaxWidth(0.40f),
+                            .fillMaxWidth(0.25f),
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.rainfall2),
+                            painter = painterResource(id = R.drawable.rainfall99),
                             contentDescription = null,
                             modifier = Modifier.size(30.dp),
                             colorFilter = ColorFilter.tint(Color.White)
@@ -411,13 +411,13 @@ fun LocalTempActivity(
                     }
                     Box(
                         modifier = Modifier
-                            .fillMaxWidth(0.30f)
+                            .fillMaxWidth(0.40f)
                             .fillMaxWidth(),
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
                             text = "0 mm",
-                            fontSize = 20.sp,
+                            fontSize = 17.sp,
                             color = Color.White,
                             fontFamily = FontFamily(Font(R.font.regular))
                         )
