@@ -1,4 +1,4 @@
-package com.s16.febraury.Screens.Local
+package com.s16.febraury.Screens.Network
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
