@@ -302,25 +302,6 @@ fun LocalTempActivity(navController: NavHostController) {
                     }
                     Spacer(modifier = Modifier.height(50.dp))
 
-                }
-            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
